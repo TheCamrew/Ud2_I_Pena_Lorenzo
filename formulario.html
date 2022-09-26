@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Formulario</title>
+</head>
+
+<body>
+    <header>
+        <div>
+            <h1>Formulario</h1>
+        </div>
+        <div>
+            <div>
+                <a href="index.html">Indice</a>
+            </div>
+            <div>
+                <a href="formulario.html">Formulario</a>
+            </div>
+        </div>
+    </header>
+    <div>
+        <form action="" method="get">
+            <fieldset>
+                <div>
+                    Nombre:
+                    <div>
+                        <label for="name">
+                            <input type="text" placeholder="Nombre" id="name" required>
+                        </label>
+                    </div>
+                </div>
+                <div>
+                    Apellidos:
+                    <div>
+                        <label for="surname">
+                            <input type="text" placeholder="Apellidos" id="surname" required>
+                        </label>
+                    </div>
+                </div>
+                <div>
+                    Correo:
+                    <div>
+                        <label for="mail">
+                            <input type="email" placeholder="Email" id="mail" required>
+                        </label>
+                    </div>
+                </div>
+                <!--
+                <div>
+                    ¿Cuál es tu personaje favorito?
+                    <div>
+                        <label for="char">
+                            <select id="char">
+                                <option value="char1">Shrek</option>
+                                <option value="char2">Asno</option>
+                                <option value="char3">Fiona</option>
+                                <option value="char4">Lord Farquaad</option>
+                                <option value="char5">Dragona</option>
+                            </select>
+                        </label>
+                    </div>
+                </div>
+            -->
+                <!--
+                <div>
+                    Introduce tu opinión:
+                    <div>
+                        <label for="opn">
+                            <textarea id="opn" required></textarea>
+                        </label>
+                    </div>
+                </div>
+            -->
+                <!--
+                    <div>
+                        Puntuacion general de la película
+                        <div>
+                            <label for="general">
+                                1
+                                <input type="range" min="1" max="10" step="1">
+                                10
+                            </label>
+                        </div>
+                    </div>
+                -->
+                <div>
+                    Sexo
+                    <div>
+                        <label for="recom">
+                            <input type="radio" name="recom" id="recom1">Si
+                            <input type="radio" name="recom" id="recom2">Por Supuesto
+                            <input type="radio" name="recom" id="recom3">Otro
+                        </label>
+                    </div>
+                </div>
+            </fieldset>
+            <div class="formButtonContainer">
+                <input type="submit" class="button" />
+                <input type="reset" class="button" />
+            </div>
+        </form>
+    </div>
+    <footer>Añadir Footer</footer>
+
+</body>
+
+</html>
