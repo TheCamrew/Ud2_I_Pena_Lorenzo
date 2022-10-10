@@ -1,0 +1,55 @@
+* {
+    margin: 0px;
+    font-family: Okine;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.menu {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-left: 25%;
+    padding-right: 25%;
+    background-color: #D6771F;
+    align-items: center;
+    padding-top: 0.5%;
+    padding-bottom: 0.5%;
+}
+
+.menuHead {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-left: 25%;
+    padding-right: 25%;
+    align-items: center;
+    background-color: #E08229;
+    padding-top: 1%;
+    padding-bottom: 1%;
+}
+
+.login {
+    background-color: #04C8C8;
+    border: 0px;
+    cursor: pointer;
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: bold;
+    padding: 10px 23px;
+    text-decoration: none;
+}
+
+.login:
+
+.login:hover {
+    background-color: #00E0E0;
+}
+
+@font-face {
+    font-family: Okine;
+    src: url(../fonts/OkineSans.otf);
+}
