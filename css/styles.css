@@ -54,7 +54,7 @@ a:hover {
 .menuHeadRight{
     display: flex;
     align-items: center;
-    width: 15%;
+    width: 12%;
     justify-content: space-between;
 }
 
