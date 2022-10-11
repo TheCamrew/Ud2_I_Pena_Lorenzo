@@ -54,8 +54,12 @@ a:hover {
 .menuHeadRight{
     display: flex;
     align-items: center;
-    width: 12%;
+    width: 18%;
     justify-content: space-between;
+}
+
+.log{
+    display: flex;
 }
 
 .icon{
