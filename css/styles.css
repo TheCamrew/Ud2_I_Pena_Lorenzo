@@ -1,3 +1,4 @@
+/*GENERAL*/
 * {
     margin: 0px;
     font-family: Okine;
@@ -12,31 +13,14 @@ a:hover {
     color: #252525;
 }
 
-.menu {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    padding-left: 25%;
-    padding-right: 25%;
-    background-color: #D6771F;
-    align-items: center;
+@font-face {
+    font-family: Okine;
+    src: url(../fonts/OkineSans.otf);
 }
 
-.menuItem {
-    width: 100%;
-    text-align: center;
-}
+/*HEADER*/
 
-.menuItem:hover {
-    background-color: #E08229;
-}
-
-.menuLink {
-    width: 100%;
-    display: block;
-    padding-top: 4%;
-    padding-bottom: 4%;
-}
+/*MENU HEAD*/
 
 .menuHead {
     display: flex;
@@ -48,6 +32,19 @@ a:hover {
     background-color: #E08229;
     padding-top: 1%;
     padding-bottom: 1%;
+}
+
+.menuHeadRight {
+    display: flex;
+    align-items: center;
+    width: 20%;
+    justify-content: space-between;
+}
+
+.log {
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
 }
 
 .shoppingCart {
@@ -66,29 +63,44 @@ a:hover {
     align-items: center;
 }
 
-.menuHeadRight {
-    display: flex;
-    align-items: center;
-    width: 18%;
-    justify-content: space-between;
-}
-
-.log {
-    display: flex;
-    width: 100%;
-    justify-content: space-evenly;
-}
-
-.icon {
-    width: 60%;
-}
-
-
 .shoppingCart:hover {
     background-color: #04B4B4;
 }
 
-@font-face {
-    font-family: Okine;
-    src: url(../fonts/OkineSans.otf);
+.shopIcon {
+    width: 60%;
+    background-color: transparent;
+}
+
+.shoppingCart:hover .shopIcon {
+    width: 65%;
+}
+
+/*MENU*/
+
+.menu {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-left: 25%;
+    padding-right: 25%;
+    background-color: #D6771F;
+    align-items: center;
+}
+
+.menuItem {
+    width: 100%;
+    text-align: center;
+}
+
+.menuLink {
+    width: 100%;
+    display: block;
+    padding-top: 4%;
+    padding-bottom: 4%;
+    background-color: #D6771F;
+}
+
+.menuLink:hover {
+    background-color: #E08229;
 }
