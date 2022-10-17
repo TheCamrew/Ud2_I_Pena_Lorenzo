@@ -23,15 +23,19 @@ a:hover {
 }
 
 .menuItem {
-    padding-top: 1%;
-    padding-bottom: 1%;
     width: 100%;
     text-align: center;
 }
 
 .menuItem:hover {
     background-color: #E08229;
+}
 
+.menuLink {
+    width: 100%;
+    display: block;
+    padding-top: 4%;
+    padding-bottom: 4%;
 }
 
 .menuHead {
@@ -71,6 +75,8 @@ a:hover {
 
 .log {
     display: flex;
+    width: 100%;
+    justify-content: space-evenly;
 }
 
 .icon {
