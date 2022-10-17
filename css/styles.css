@@ -34,6 +34,12 @@ a:hover {
     padding-bottom: 1%;
 }
 
+.menuHeadLeft {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
 .menuHeadRight {
     display: flex;
     align-items: center;
