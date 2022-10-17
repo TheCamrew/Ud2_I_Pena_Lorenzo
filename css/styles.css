@@ -104,3 +104,51 @@ a:hover {
 .menuLink:hover {
     background-color: #E08229;
 }
+
+/*MAIN*/
+
+.main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/*SECTIONMAIN*/
+
+section {
+    width: 50%;
+    background-color: #04B4B4;
+}
+
+h2 {
+    padding: 1%;
+}
+
+/*ITEM*/
+
+.itemContainer {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.itemInfo {
+    margin: 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100px;
+}
+
+.itemPrice{
+    font-size: 25px;
+}
+
+.itemRegion{
+    color: white;
+}
+.defaultItem {
+    width: auto;
+    background-color: #D6771F;
+    margin: 2%;
+}
