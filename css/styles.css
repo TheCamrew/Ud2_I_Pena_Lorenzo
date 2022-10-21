@@ -1,7 +1,8 @@
 :root {
-    --mainWidth: 60%;
+    --mainWidth: 65%;
     --brightOrange: #E08229;
     --darkOrange: #D6771F;
+    --darkerOrange: #D0731C;
     --accentColor: #04B4B4;
 }
 
@@ -58,7 +59,6 @@ header {
 .menuHeadRight {
     display: flex;
     align-items: center;
-    width: 20%;
     justify-content: space-between;
     width: 200px;
 }
@@ -104,8 +104,8 @@ header {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    padding-left: 20%;
-    padding-right: 20%;
+    padding-left: 17.5%;
+    padding-right: 17.5%;
     background-color: var(--darkOrange);
     align-items: center;
     width: var(--mainWidth);
@@ -124,6 +124,7 @@ header {
     border-right: 2px solid black;
     border-top: 2px solid var(--brightOrange);
     border-bottom: 2px none black;
+    transform: scale(1.03);
 }
 
 .menuLink {
@@ -144,24 +145,23 @@ header {
     display: flex;
     flex-direction: column;
     align-items: center;
+    background-color: #04C8C8;
 }
-
-///////////////////////////////////////////////////////////////////////////////ARREGLAR///////////////////////////////////////////////////////////////////////////////
-.main:nth-child(even) {
-    background-color: var(--brightOrange);
-}
-
-.main:nth-child(odd) {
-    background-color: var(--darkOrange);
-}
-///////////////////////////////////////////////////////////////////////////////ARREGLAR///////////////////////////////////////////////////////////////////////////////
 
 /*SECTIONMAIN*/
 
 section {
-    width: var(--mainWidth);
-    background-color: var(--accentColor);
+    /*background-color: var(--accentColor);*/
     padding-top: 1%;
+    width: var(--mainWidth);
+}
+
+section:nth-child(odd) {
+    background-color: var(--brightOrange);
+}
+
+section:nth-child(even) {
+    background-color: var(--darkOrange);
 }
 
 .sectionHeader {
@@ -169,8 +169,6 @@ section {
     font-size: 2rem;
     text-align: center;
 }
-
-
 
 /*ITEM*/
 
@@ -181,13 +179,16 @@ section {
 }
 
 .defaultItem {
-    background-color: var(--darkOrange);
-    margin: 2%;
+    background-color: var(--darkerOrange);
+    margin-top: 2%;
+    margin-bottom: 2%;
     border-radius: 5%;
 }
 
 .defaultItem:hover {
-    background-color: var(--brightOrange);
+    background-color: var(--accentColor);
+    box-shadow: 2px 2px 1px black;
+    transform: scale(1.03);
 }
 
 .defaultItem:hover .itemImage {
@@ -199,7 +200,6 @@ section {
     border-radius: 5%;
     border-bottom-left-radius: 0%;
     border-bottom-right-radius: 0%;
-    width: 100%;
     border-bottom: 2px solid black;
 }
 
@@ -226,4 +226,10 @@ section {
 
 .itemRegion {
     color: white;
+}
+
+/*FOOTER*/
+
+footer {
+    background-color: var(--darkerOrange);
 }
