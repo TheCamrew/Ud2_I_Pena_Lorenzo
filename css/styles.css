@@ -183,6 +183,7 @@ section:nth-child(even) {
     margin-top: 2%;
     margin-bottom: 2%;
     border-radius: 5%;
+    max-width: 256px;
 }
 
 .defaultItem:hover {
@@ -201,6 +202,7 @@ section:nth-child(even) {
     border-bottom-left-radius: 0%;
     border-bottom-right-radius: 0%;
     border-bottom: 2px solid black;
+    max-width: 256px;
 }
 
 .itemInfo {
