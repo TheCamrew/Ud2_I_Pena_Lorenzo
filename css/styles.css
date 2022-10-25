@@ -3,7 +3,8 @@
     --brightOrange: #E08229;
     --darkOrange: #D6771F;
     --darkerOrange: #D0731C;
-    --accentColor: #04B4B4;
+    --lightAccentColor: #04B4B4;
+    --accentColor: #04C8C8;
 }
 
 /*GENERAL*/
@@ -70,7 +71,7 @@ header {
 }
 
 .shoppingCart {
-    background-color: #04C8C8;
+    background-color: var(--accentColor);
     border: 0px;
     cursor: pointer;
     color: #ffffff;
@@ -86,7 +87,7 @@ header {
 }
 
 .shoppingCart:hover {
-    background-color: var(--accentColor);
+    background-color: var(--lightAccentColor);
 }
 
 .shopIcon {
@@ -108,23 +109,19 @@ header {
     padding-right: 17.5%;
     background-color: var(--darkOrange);
     align-items: center;
+    border-bottom: 2px solid black;
     width: var(--mainWidth);
+    height: 45px;
 }
 
 .menuItem {
     width: 25%;
     text-align: center;
-    border-bottom: 2px solid black;
-    border-left: 2px solid var(--darkOrange);
-    border-right: 2px solid var(--darkOrange);
 }
 
 .menuItem:hover {
-    border-left: 2px solid black;
-    border-right: 2px solid black;
-    border-top: 2px solid var(--brightOrange);
-    border-bottom: 2px none black;
     transform: scale(1.03);
+    box-shadow: 2px 2px 0px black;
 }
 
 .menuLink {
@@ -145,13 +142,13 @@ header {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: #04C8C8;
+    background-color: var(--accentColor);
 }
 
 /*SECTIONMAIN*/
 
 section {
-    /*background-color: var(--accentColor);*/
+    /*background-color: var(--lightAccentColor);*/
     padding-top: 1%;
     width: var(--mainWidth);
 }
