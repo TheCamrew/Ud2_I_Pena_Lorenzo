@@ -154,6 +154,8 @@ section {
     padding-top: 1%;
     width: var(--mainWidth);
     min-width: 260px;
+    border-left: 2px solid black;
+    border-right: 2px solid black;
 }
 
 section:nth-child(odd) {
@@ -213,6 +215,10 @@ section:nth-child(even) {
     height: 100px;
 }
 
+.itemTitle {
+    font-size: 20px;
+}
+
 .itemText {
     display: flex;
     flex-direction: row;
@@ -233,6 +239,7 @@ section:nth-child(even) {
 
 .itemRegion {
     color: white;
+    text-transform: uppercase;
 }
 
 /*FOOTER*/
