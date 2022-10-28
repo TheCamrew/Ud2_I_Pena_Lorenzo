@@ -1,5 +1,7 @@
 //document.getElementById("recent").innerHTML = "jajasi";
 
+const regions = ["global", "europa", "asia", "africa", "oceania", "america", "antartida"];
+
 class Item {
     image;
     itemName;
@@ -11,9 +13,9 @@ class Item {
 
         this.image = "img/itemImages/default.png";
         this.itemName = "Jumanji";
-        this.region = "europe";
-        this.price = "123";
-        this.originalPrice = "3";
+        this.region = regions[Math.round(Math.random() * (regions.length - 1))];
+        this.price = Math.round(Math.random() * 10000) / 100;
+        this.originalPrice = Math.round(Math.random() * 10000) / 100;
 
         this.generate(parent);
     }
@@ -59,14 +61,6 @@ class Item {
         itemDiscount.className = "itemDiscount";
         itemDiscount.innerHTML = this.originalPrice + "€";
         div.appendChild(itemDiscount);
-
-
-
-
-
-
-
-
     }
 
 }
@@ -77,4 +71,10 @@ const recentLaunchNumber = 7;
 
 for (let i = 0; i < recentLaunchNumber; i++) {
     recentLaunch.push(new Item(document.getElementById("recent")));
+}
+
+var sell = Array();
+
+for (let i = 0; i < recentLaunchNumber; i++) {
+    sell.push(new Item(document.getElementById("mostSold")));
 }
