@@ -205,7 +205,8 @@ section:nth-child(even) {
 }
 
 .itemInfo {
-    margin: 5%;
+    margin: 5px;
+    margin-top: 10px;
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -223,6 +224,11 @@ section:nth-child(even) {
 
 .itemPrice {
     font-size: 30px;
+}
+
+.itemDiscount {
+    text-decoration: line-through;
+    text-align: center;
 }
 
 .itemRegion {
