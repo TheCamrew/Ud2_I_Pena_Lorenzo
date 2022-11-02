@@ -128,20 +128,8 @@ header {
     background-color: var(--brightOrange);
 }
 
-.currentMenuItem {
-    width: 25%;
-    text-align: center;
-    height: 45px;
-    top: 25%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    min-width: 100px;
-    background-color: var(--brightOrange)
-}
-
-.menuItem:hover .currentMenuItem{
-    background-color: var(--accentColor);
+#currentMenu {
+    background-color: var(--brightOrange);
 }
 
 .menuLink {
