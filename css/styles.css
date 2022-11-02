@@ -158,7 +158,6 @@ section {
     min-width: 260px;
     border-left: 2px solid black;
     border-right: 2px solid black;
-    box-shadow: 5px 5px 1px black;
 }
 
 section:nth-child(odd) {
