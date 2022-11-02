@@ -259,3 +259,15 @@ footer {
     display: flex;
     align-items: center;
 }
+
+/**/
+
+input{
+    border-radius: 20px;
+    padding: 2px;
+}
+
+textarea{
+    border-radius: 20px;
+    padding: 2px;
+}
