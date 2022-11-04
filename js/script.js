@@ -8,7 +8,7 @@ class Item {
     originalPrice;
 
     constructor(parent) {
-        this.image = "img/itemImages/default.png";
+        this.image = "default.png";
         this.itemName = "Jumanji";
         this.region = regions[Math.round(Math.random() * (regions.length - 1))];
         this.price = Math.round(Math.random() * 10000) / 100;
@@ -24,7 +24,7 @@ class Item {
 
         let image = document.createElement("img");
         image.className = "itemImage";
-        image.src = this.image;
+        image.src = "img/itemImages/" + this.image;
         item.appendChild(image);
 
         let itemInfo = document.createElement("div");
@@ -61,9 +61,31 @@ class Item {
     }
 }
 
-function populateSection(array,id, amount) {
+function populateSection(array, id, amount) {
     for (let i = 0; i < amount; i++) {
         array.push(new Item(document.getElementById(id)));
+    }
+}
+
+async function loadGames() {
+    var games;
+    try {
+        games = await fetch("../assets/games.json").then((response) => response.json()
+        );
+    } catch (error) {
+        console.log(error);
+    }
+    return games;
+}
+
+const games = loadGames();
+xd();
+
+async function xd() {
+
+    console.log("a");
+    for (let i = 0; i < games.length; i++) {
+        console.log(games[i]);
     }
 }
 
