@@ -1,5 +1,3 @@
-//document.getElementById("recent").innerHTML = "jajasi";
-
 const regions = ["global", "europa", "asia", "africa", "oceania", "america", "antartida"];
 
 class Item {
@@ -10,7 +8,6 @@ class Item {
     originalPrice;
 
     constructor(parent) {
-
         this.image = "img/itemImages/default.png";
         this.itemName = "Jumanji";
         this.region = regions[Math.round(Math.random() * (regions.length - 1))];
@@ -62,19 +59,19 @@ class Item {
         itemDiscount.innerHTML = this.originalPrice + "€";
         div.appendChild(itemDiscount);
     }
+}
 
+function populateSection(array,id, amount) {
+    for (let i = 0; i < amount; i++) {
+        array.push(new Item(document.getElementById(id)));
+    }
 }
 
 var recentLaunch = Array();
+var mostSold = Array();
 
 const recentLaunchNumber = 7;
 
-for (let i = 0; i < recentLaunchNumber; i++) {
-    recentLaunch.push(new Item(document.getElementById("recent")));
-}
+populateSection(recentLaunch, "recent", recentLaunchNumber);
 
-var sell = Array();
-
-for (let i = 0; i < recentLaunchNumber; i++) {
-    sell.push(new Item(document.getElementById("mostSold")));
-}
+populateSection(mostSold, "mostSold", recentLaunchNumber);

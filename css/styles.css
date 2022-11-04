@@ -253,21 +253,29 @@ section:nth-child(even) {
 
 footer {
     background-color: var(--darkerOrange);
+    display: flex;
+    justify-content: center;
+    padding: 20px;
 }
 
-.footerLogo{
+.footerDiv {
+    min-width: 500px;
+    width: var(--mainWidth);
+}
+
+.footerLogo {
     display: flex;
     align-items: center;
 }
 
 /**/
 
-input{
+input {
     border-radius: 20px;
     padding: 2px;
 }
 
-textarea{
+textarea {
     border-radius: 20px;
     padding: 2px;
 }
