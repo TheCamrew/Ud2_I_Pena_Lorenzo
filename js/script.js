@@ -67,7 +67,7 @@ function populateSection(array, id, amount) {
     }
 }
 
-async function loadGames() {
+async function loadJson() {
     var games;
     try {
         games = await fetch("../assets/games.json").then((response) => response.json()
@@ -78,12 +78,14 @@ async function loadGames() {
     return games;
 }
 
-const games = loadGames();
-xd();
+var games;
 
-async function xd() {
+loadGames();
 
-    console.log("a");
+async function loadGames() {
+
+    games = await loadJson();
+
     for (let i = 0; i < games.length; i++) {
         console.log(games[i]);
     }

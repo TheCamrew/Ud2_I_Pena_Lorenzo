@@ -146,6 +146,8 @@ header {
     background-size: auto;
     background-position: center center;
     background-attachment: fixed;
+    
+    background-color: var(--accentColor);
 }
 
 /*SECTIONMAIN*/
