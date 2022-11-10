@@ -7,12 +7,12 @@ class Item {
     price;
     originalPrice;
 
-    constructor(parent) {
-        this.image = "default.png";
-        this.itemName = "Jumanji";
-        this.region = regions[Math.round(Math.random() * (regions.length - 1))];
-        this.price = Math.round(Math.random() * 10000) / 100;
-        this.originalPrice = Math.round(Math.random() * 10000) / 100;
+    constructor(parent, image, itemName, region, price, originalPrice) {
+        this.image = image;
+        this.itemName = itemName;
+        this.region = regions[region];
+        this.price = price;
+        this.originalPrice = originalPrice;
 
         this.generate(parent);
     }
@@ -61,11 +61,16 @@ class Item {
     }
 }
 
-function populateSection(array, id, amount) {
-    for (let i = 0; i < amount; i++) {
-        array.push(new Item(document.getElementById(id)));
-    }
-}
+var games;
+
+loadGames();
+
+var recentLaunch = Array();
+var mostSold = Array();
+
+const recentLaunchNumber = 7;
+
+//populateSection(mostSold, "mostSold", recentLaunchNumber);
 
 async function loadJson() {
     var games;
@@ -78,24 +83,11 @@ async function loadJson() {
     return games;
 }
 
-var games;
-
-loadGames();
-
 async function loadGames() {
 
     games = await loadJson();
 
-    for (let i = 0; i < games.length; i++) {
-        console.log(games[i]);
-    }
+    games.forEach(item => {
+        recentLaunch.push(new Item(document.getElementById("recent"), item.image, item.itemName, item.region, item.price, item.originalPrice));
+    });
 }
-
-var recentLaunch = Array();
-var mostSold = Array();
-
-const recentLaunchNumber = 7;
-
-populateSection(recentLaunch, "recent", recentLaunchNumber);
-
-populateSection(mostSold, "mostSold", recentLaunchNumber);

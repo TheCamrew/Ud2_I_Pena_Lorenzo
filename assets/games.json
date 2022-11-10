@@ -1,16 +1,16 @@
 [
     {
-        "image": "default.png",
         "itemName": "Jumanji",
+        "image": "default.png",
         "region": "1",
         "price": "17",
         "originalPrice": "21",
         "sales": "2"
     },
     {
-        "image": "default.png",
-        "itemName": "Jumanji",
-        "region": "2",
+        "itemName": "Payaso Esponja Horror Abuelita miedo",
+        "image": "unnamed.png",
+        "region": "0",
         "price": "17",
         "originalPrice": "21",
         "sales": "2"
