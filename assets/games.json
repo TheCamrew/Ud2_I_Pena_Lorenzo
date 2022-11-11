@@ -1,18 +1,83 @@
 [
     {
         "itemName": "Jumanji",
-        "image": "default.png",
+        "image": "jumanji.png",
         "region": "1",
         "price": "17",
         "originalPrice": "21",
-        "sales": "2"
+        "sales": "2",
+        "releaseDate": "2012-04-23T18:25:43.511Z"
     },
     {
         "itemName": "Payaso Esponja Horror Abuelita miedo",
-        "image": "unnamed.png",
+        "image": "payaso.png",
+        "region": "6",
+        "price": "17",
+        "originalPrice": "21",
+        "sales": "2",
+        "releaseDate": "2012-04-23T18:25:43.511Z"
+    },
+    {
+        "itemName": "Fortnite",
+        "image": "fortnite.png",
         "region": "0",
         "price": "17",
         "originalPrice": "21",
-        "sales": "2"
+        "sales": "2",
+        "releaseDate": "2012-04-23T18:25:43.511Z"
+    },
+    {
+        "itemName": "Minecraft",
+        "image": "minecraft.png",
+        "region": "0",
+        "price": "15.99",
+        "originalPrice": "24.99",
+        "sales": "2",
+        "releaseDate": "2012-04-23T18:25:43.511Z"
+    },
+    {
+        "itemName": "Geometry Dash",
+        "image": "geometrydash.png",
+        "region": "0",
+        "price": "0.99",
+        "originalPrice": "3.99",
+        "sales": "2",
+        "releaseDate": "2012-04-23T18:25:43.511Z"
+    },
+    {
+        "itemName": "Age Of Empires 3",
+        "image": "aoe3.png",
+        "region": "0",
+        "price": "30.99",
+        "originalPrice": "39.99",
+        "sales": "2",
+        "releaseDate": "2012-04-23T18:25:43.511Z"
+    },
+    {
+        "itemName": "Buscaminas",
+        "image": "minesweeper.png",
+        "region": "0",
+        "price": "0.99",
+        "originalPrice": "1.99",
+        "sales": "2",
+        "releaseDate": "2012-04-23T18:25:43.511Z"
+    },
+    {
+        "itemName": "Elden Ring",
+        "image": "eldenring.png",
+        "region": "0",
+        "price": "43.99",
+        "originalPrice": "59.99",
+        "sales": "2",
+        "releaseDate": "2012-04-23T18:25:43.511Z"
+    },
+    {
+        "itemName": "Hello Kitty Online",
+        "image": "hellokittyonline.png",
+        "region": "0",
+        "price": "198.99",
+        "originalPrice": "199.99",
+        "sales": "2",
+        "releaseDate": "2012-04-23T18:25:43.511Z"
     }
 ]

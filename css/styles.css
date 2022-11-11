@@ -218,11 +218,12 @@ section:nth-child(even) {
 
 
 .itemImage {
-    border-radius: 20px;
+    border-radius: 19px;
     border-bottom-left-radius: 0%;
     border-bottom-right-radius: 0%;
     border-bottom: 2px solid black;
     width: 100%;
+    background-color: black;
 }
 
 .itemInfo {
