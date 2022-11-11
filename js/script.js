@@ -62,6 +62,7 @@ class Item {
 }
 
 var games;
+const startGameAmount = 8;
 
 loadGames();
 
@@ -88,13 +89,34 @@ async function loadGames() {
 }
 
 function populateRecentLaunch() {
+
+    games.sort((a, b) => (a.sales < b.sales) ? 1 : -1);
+
+    let counter = 0;
+
     games.forEach(item => {
+        if (counter >= startGameAmount) {
+            return;
+        }
         recentLaunch.push(new Item(document.getElementById("recent"), item.image, item.itemName, item.region, item.price, item.originalPrice));
+        counter++;
     });
+
+
 }
 
 function populateMostSold() {
+
+    games.sort((a, b) => (a.releaseDate < b.releaseDate) ? 1 : -1);
+
+    let counter = 0;
+
     games.forEach(item => {
+
+        if (counter >= startGameAmount) {
+            return;
+        }
         mostSold.push(new Item(document.getElementById("mostSold"), item.image, item.itemName, item.region, item.price, item.originalPrice));
+        counter++;
     });
 }
