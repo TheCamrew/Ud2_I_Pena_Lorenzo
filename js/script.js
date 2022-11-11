@@ -86,6 +86,7 @@ async function loadGames() {
 
     populateRecentLaunch();
     populateMostSold();
+    populateBestPrice();
 }
 
 function populateRecentLaunch() {
@@ -115,6 +116,23 @@ function populateMostSold() {
             return;
         }
         recentLaunch.push(new Item(document.getElementById("recent"), item.image, item.itemName, item.region, item.price, item.originalPrice));
+        counter++;
+    });
+
+
+}
+
+function populateBestPrice() {
+
+    games.sort((a, b) => (1 - (a.price / a.originalPrice) < 1 - (b.price / b.originalPrice)) ? 1 : -1);
+
+    let counter = 0;
+
+    games.forEach(item => {
+        if (counter >= startGameAmount) {
+            return;
+        }
+        recentLaunch.push(new Item(document.getElementById("bestPrice"), item.image, item.itemName, item.region, item.price, item.originalPrice));
         counter++;
     });
 
