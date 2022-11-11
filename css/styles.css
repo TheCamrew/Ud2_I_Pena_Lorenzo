@@ -138,6 +138,15 @@ header {
     height: 50%;
 }
 
+.menuArrow {
+    width: 20px;
+    display: none;
+}
+
+#arrowCont {
+    display: none;
+}
+
 /*MAIN*/
 
 .main {
@@ -300,6 +309,18 @@ textarea {
         display: flex;
     }
 
+    .menu:hover #arrowCont {
+        display: none;
+    }
+
+    .menu:focus-within .menuItem {
+        display: flex;
+    }
+
+    .menu:focus-within #arrowCont {
+        display: none;
+    }
+
     .menuItem {
         display: none;
         width: 100vw;
@@ -307,5 +328,14 @@ textarea {
 
     #currentMenu {
         display: flex;
+    }
+
+    #arrowCont {
+        display: flex;
+    }
+
+    .menuArrow {
+        width: 30px;
+        display: block;
     }
 }
