@@ -118,8 +118,6 @@ function populateMostSold() {
         recentLaunch.push(new Item(document.getElementById("recent"), item.image, item.itemName, item.region, item.price, item.originalPrice));
         counter++;
     });
-
-
 }
 
 function populateBestPrice() {
@@ -135,6 +133,4 @@ function populateBestPrice() {
         recentLaunch.push(new Item(document.getElementById("bestPrice"), item.image, item.itemName, item.region, item.price, item.originalPrice));
         counter++;
     });
-
-
 }
