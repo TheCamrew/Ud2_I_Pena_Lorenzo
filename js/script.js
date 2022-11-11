@@ -68,10 +68,6 @@ loadGames();
 var recentLaunch = Array();
 var mostSold = Array();
 
-const recentLaunchNumber = 7;
-
-//populateSection(mostSold, "mostSold", recentLaunchNumber);
-
 async function loadJson() {
     var games;
     try {
@@ -87,7 +83,18 @@ async function loadGames() {
 
     games = await loadJson();
 
+    populateRecentLaunch();
+    populateMostSold();
+}
+
+function populateRecentLaunch() {
     games.forEach(item => {
         recentLaunch.push(new Item(document.getElementById("recent"), item.image, item.itemName, item.region, item.price, item.originalPrice));
+    });
+}
+
+function populateMostSold() {
+    games.forEach(item => {
+        mostSold.push(new Item(document.getElementById("mostSold"), item.image, item.itemName, item.region, item.price, item.originalPrice));
     });
 }
