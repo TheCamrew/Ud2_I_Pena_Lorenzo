@@ -127,14 +127,7 @@ section {
     min-width: 260px;
     border-left: 2px solid black;
     border-right: 2px solid black;
-}
-
-section:nth-child(odd) {
     background-color: var(--brightOrange);
-}
-
-section:nth-child(even) {
-    background-color: var(--darkOrange);
 }
 
 .sectionHeader {

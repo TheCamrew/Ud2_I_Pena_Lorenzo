@@ -1,0 +1,7 @@
+section:nth-child(odd) {
+    background-color: var(--brightOrange);
+}
+
+section:nth-child(even) {
+    background-color: var(--darkOrange);
+}

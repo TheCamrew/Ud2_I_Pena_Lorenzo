@@ -1,0 +1,25 @@
+body {
+    height: 100vh;
+    display: grid;
+    grid-template-rows: min-content auto;
+}
+
+.main{
+    background-color: var(--brightOrange);
+    background-image: none;
+}
+
+section {
+    width: 50vw;
+    border: 0;
+    background-color: var(--darkOrange);
+    border-radius: 20px;
+    padding: 10px;
+    max-width: 500px;
+}
+
+input{
+    width: 100%;
+    margin: 10px;
+    margin-left: 0px;
+}
