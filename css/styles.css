@@ -280,7 +280,6 @@ footer {
 }
 
 .footerDiv {
-    min-width: 500px;
     width: var(--mainWidth);
 }
 
@@ -289,17 +288,28 @@ footer {
     align-items: center;
 }
 
-/**/
 
-input {
-    border-radius: 20px;
+
+/*Form*/
+
+fieldset{
+    border: 0;
+}
+
+input{
+    border: 0;
+    border-radius: 10px;
     padding: 2px;
 }
 
 textarea {
     border-radius: 20px;
-    padding: 2px;
+    padding: 6px;
 }
+
+
+
+/*Media*/
 
 @media (max-width: 780px) {
 
