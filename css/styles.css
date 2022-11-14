@@ -18,6 +18,11 @@ a {
     color: black;
 }
 
+a:hover {
+    text-decoration: none;
+    color: rgb(43, 43, 43);
+}
+
 @font-face {
     font-family: Okine;
     src: url(../fonts/OkineSans.otf);
@@ -84,6 +89,9 @@ header {
 
 .shoppingCart:hover {
     background-color: var(--lightAccentColor);
+    transform: scale(1.1);
+    transition: ease;
+    transition-duration: 200ms;
 }
 
 .shopIcon {
