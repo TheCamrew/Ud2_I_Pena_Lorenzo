@@ -58,7 +58,7 @@
             </div>
             <form action="" method="post">
                 <fieldset>
-                    <div>
+                    <div class="formSec">
                         Nombre:
                         <div>
                             <label for="name">
@@ -66,7 +66,7 @@
                             </label>
                         </div>
                     </div>
-                    <div>
+                    <div class="formSec">
                         Apellidos:
                         <div>
                             <label for="surname">
@@ -74,7 +74,7 @@
                             </label>
                         </div>
                     </div>
-                    <div>
+                    <div class="formSec">
                         Correo:
                         <div>
                             <label for="mail">
@@ -110,17 +110,27 @@
                             </div>
                         </div>
                     -->
-                    <div>
+                    <div class="formSec">
                         Sexo
                         <div>
-                            <label for="sex">
-                                <input type="radio" name="sex" id="male">Hombre
-                                <input type="radio" name="sex" id="female">Mujer
-                                <input type="radio" name="sex" id="other">Otro
+                            <label for="sex" class="radio">
+                                <div class="radioForm">
+                                    Hombre
+                                    <input type="radio" name="sex" id="male">
+                                </div>
+                                <div class="radioForm">
+                                    Mujer
+                                    <input type="radio" name="sex" id="female">
+                                </div>
+                                <div class="radioForm">
+                                    Otro
+                                    <input type="radio" name="sex" id="other">
+                                </div>
+
                             </label>
                         </div>
                     </div>
-                    <div>
+                    <div class="formSec">
                         Introduce tu opinión:
                         <div>
                             <label for="opn">
@@ -129,9 +139,8 @@
                         </div>
                     </div>
                 </fieldset>
-                <div>
-                    <input type="submit" />
-                    <input type="reset" />
+                <div class="formSec">
+                    <input type="submit" class="sendButton" />
                 </div>
             </form>
         </section>

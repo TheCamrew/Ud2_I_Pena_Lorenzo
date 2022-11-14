@@ -46,3 +46,17 @@ textarea {
     padding-top: 20px;
     width: 100%;
 }
+
+section {
+    padding: 20px;
+}
+
+.radio{
+    display: flex;
+}
+
+.radioForm{
+    display: flex;
+    align-items: center;
+    width: 33%;
+}
