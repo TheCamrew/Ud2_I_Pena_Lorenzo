@@ -1,0 +1,16 @@
+/*Form*/
+
+fieldset{
+    border: 0;
+}
+
+input{
+    border: 0;
+    border-radius: 10px;
+    padding: 2px;
+}
+
+textarea {
+    border-radius: 20px;
+    padding: 6px;
+}

@@ -5,7 +5,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/genStyles.css">
+    <link rel="stylesheet" href="css/formStyles.css">
+    <link rel="stylesheet" href="css/menuStyles.css">
     <title>GameLocker - Contacto</title>
     <link rel="icon" type="image/x-icon" href="img/icon.png">
 </head>
@@ -60,7 +62,7 @@
                         Nombre:
                         <div>
                             <label for="name">
-                                <input type="text" placeholder="Nombre" id="name" required>
+                                <input type="text" placeholder="Nombre" id="name" required="">
                             </label>
                         </div>
                     </div>
@@ -68,7 +70,7 @@
                         Apellidos:
                         <div>
                             <label for="surname">
-                                <input type="text" placeholder="Apellidos" id="surname" required>
+                                <input type="text" placeholder="Apellidos" id="surname" required="">
                             </label>
                         </div>
                     </div>
@@ -76,7 +78,7 @@
                         Correo:
                         <div>
                             <label for="mail">
-                                <input type="email" placeholder="Email" id="mail" required>
+                                <input type="email" placeholder="Email" id="mail" required="">
                             </label>
                         </div>
                     </div>
@@ -122,19 +124,26 @@
                         Introduce tu opinión:
                         <div>
                             <label for="opn">
-                                <textarea id="opn" required></textarea>
+                                <textarea id="opn" required=""></textarea>
                             </label>
                         </div>
                     </div>
                 </fieldset>
-                <div">
+                <div>
                     <input type="submit" />
                     <input type="reset" />
+                </div>
+            </form>
+        </section>
     </div>
-    </form>
-    </section>
-    </div>
-    <footer>Añadir Footer</footer>
+    <footer>
+        <div class="footerDiv">
+            <a class="footerLogo" href="index.html">
+                <img src="img/icon.png" style="width: 48px;">
+                <h2>GameLocker</h2>
+            </a>
+        </div>
+    </footer>
 
 </body>
 

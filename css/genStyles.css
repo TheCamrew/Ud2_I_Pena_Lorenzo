@@ -103,57 +103,7 @@ header {
     width: 65%;
 }
 
-/*MENU*/
 
-.menu {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    padding-left: 17.5%;
-    padding-right: 17.5%;
-    background-color: var(--darkOrange);
-    align-items: center;
-    border-bottom: 2px solid black;
-    width: var(--mainWidth);
-}
-
-.menuItem {
-    width: 25%;
-    text-align: center;
-    height: 45px;
-    top: 10%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    min-width: 100px;
-    padding-left: 1%;
-    padding-right: 1%;
-}
-
-.menuItem:hover {
-    background-color: var(--brightOrange);
-}
-
-#currentMenu {
-    background-color: var(--brightOrange);
-}
-
-.menuLink {
-    width: 100%;
-    display: block;
-    padding-top: 4%;
-    padding-bottom: 4%;
-    height: 50%;
-}
-
-.menuArrow {
-    width: 20px;
-    display: none;
-}
-
-#arrowCont {
-    display: none;
-}
 
 /*MAIN*/
 
@@ -172,7 +122,6 @@ header {
 /*SECTIONMAIN*/
 
 section {
-    /*background-color: var(--lightAccentColor);*/
     padding-top: 10px;
     width: var(--mainWidth);
     min-width: 260px;
@@ -194,81 +143,7 @@ section:nth-child(even) {
     text-align: center;
 }
 
-/*ITEM*/
 
-.itemContainer {
-    display: flex;
-    justify-content: space-evenly;
-    flex-wrap: wrap;
-}
-
-.defaultItem {
-    background-color: var(--darkerOrange);
-    margin: 20px;
-    border-radius: 20px;
-    max-width: 256px;
-    cursor: pointer;
-    border: 2px black solid;
-    box-shadow: 1px 1px 1px black;
-}
-
-.defaultItem:hover {
-    background-color: var(--accentColor);
-    box-shadow: 5px 5px 1px black;
-    transform: scale(1.03);
-    transition: ease;
-    transition-duration: 400ms;
-}
-
-.defaultItem:hover .itemImage {
-    filter: brightness(85%);
-}
-
-
-.itemImage {
-    border-radius: 19px;
-    border-bottom-left-radius: 0%;
-    border-bottom-right-radius: 0%;
-    border-bottom: 2px solid black;
-    width: 100%;
-    background-color: black;
-}
-
-.itemInfo {
-    margin: 5px;
-    margin-top: 10px;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    height: 100px;
-}
-
-.itemTitle {
-    font-size: 20px;
-}
-
-.itemText {
-    display: flex;
-    flex-direction: row;
-    height: 100%;
-    justify-content: space-around;
-    align-items: center;
-    width: 100%;
-}
-
-.itemPrice {
-    font-size: 30px;
-}
-
-.itemDiscount {
-    text-decoration: line-through;
-    text-align: center;
-}
-
-.itemRegion {
-    color: white;
-    text-transform: uppercase;
-}
 
 /*FOOTER*/
 
@@ -287,27 +162,6 @@ footer {
     display: flex;
     align-items: center;
 }
-
-
-
-/*Form*/
-
-fieldset{
-    border: 0;
-}
-
-input{
-    border: 0;
-    border-radius: 10px;
-    padding: 2px;
-}
-
-textarea {
-    border-radius: 20px;
-    padding: 6px;
-}
-
-
 
 /*Media*/
 
