@@ -1,3 +1,7 @@
+header {
+    flex-direction: row;
+}
+
 body {
     height: 100vh;
     display: grid;
@@ -13,15 +17,27 @@ body {
 }
 
 section {
-    width: 50vw;
     border: 0;
     background-color: var(--darkOrange);
     border-radius: 20px;
-    padding: 10px;
+    padding: 20px;
     max-width: 500px;
 }
 
 label {
     width: 100%;
     display: block
+}
+
+.menuArrow {
+    width: 30px;
+    display: block;
+    transform: rotate(90deg);
+}
+
+.arrowCont {
+    width: 17.5vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
