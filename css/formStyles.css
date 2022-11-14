@@ -28,8 +28,10 @@ input {
 }
 
 textarea {
-    border-radius: 20px;
-    padding: 6px;
+    border-radius: 10px;
+    width: 100%;
+    resize: none;
+    border-style: none;
 }
 
 .sendButton {
