@@ -20,14 +20,14 @@ function populateRegion() {
         button.onclick = function () { clickButton(i); };
 
         button.id = "selectedRegion";
-        selectedRegionButtons.push(true);
+
+        selectedRegions.push(i);
 
         regionButtons.push(button);
 
         regionElementCont.appendChild(button);
 
     }
-    console.log(regionElementCont);
 }
 
 function capitalizeFirstLetter(string) {
@@ -38,22 +38,23 @@ function clickButton(i) {
 
     if (regionButtons[i].id == "selectedRegion") {
         regionButtons[i].id = "";
-        selectedRegionButtons[i] = false;
+        selectedRegions[i] = -1;
     } else {
         regionButtons[i].id = "selectedRegion";
-        selectedRegionButtons[i] = true;
+        selectedRegions[i] = i;
     }
-
+    console.log(selectedRegions);
     reloadGames();
-
 }
 
 function reloadGames() {
     store = [];
     document.getElementById("storeContainer").innerHTML = "";
+
+
     games.forEach(item => {
 
-        regions.forEach(element => {
+        selectedRegions.forEach(element => {
             if (item.region == element) {
                 store.push(new Item(document.getElementById("storeContainer"), item.image, item.itemName, item.region, item.price, item.originalPrice));
             }
@@ -65,7 +66,7 @@ var store = [];
 
 var regionButtons = [];
 
-var selectedRegionButtons = [];
+var selectedRegions = [];
 
 var populationPlaces = [populateStore];
 
