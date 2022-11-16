@@ -44,3 +44,11 @@ label {
     align-items: center;
     justify-content: center;
 }
+
+a{
+    text-decoration: underline;
+}
+
+.menuHeadLeft{
+    text-decoration: none;
+}

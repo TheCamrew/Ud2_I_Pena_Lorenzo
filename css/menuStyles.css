@@ -15,8 +15,7 @@
 .menuItem {
     width: 25%;
     text-align: center;
-    height: 45px;
-    top: 10%;
+    min-height: 55px;
     display: flex;
     align-items: center;
     justify-content: center;
