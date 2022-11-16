@@ -21,7 +21,7 @@ section {
 }
 
 .regItem {
-    background-color: var(--accentColor);
+    background-color: var(--darkOrange);
     padding-top: 5px;
     padding-bottom: 5px;
     margin-top: 10px;
@@ -36,4 +36,8 @@ section {
     transition: ease;
     transition-duration: 200ms;
     cursor: pointer;
+}
+
+#selectedRegion {
+    background-color: var(--accentColor);
 }

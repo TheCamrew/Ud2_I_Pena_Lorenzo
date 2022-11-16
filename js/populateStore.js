@@ -17,23 +17,43 @@ function populateRegion() {
 
         button.innerHTML = capitalizeFirstLetter(regions[i]);
 
-        button.onclick = clickButton();
+        button.onclick = function () { clickButton(i); };
+
+        if (i == 0) {
+            button.id = "selectedRegion";
+            selectedRegionButtons.push(true);
+        }
+        selectedRegionButtons.push(false);
+
+        regionButtons.push(button);
 
         regionElementCont.appendChild(button);
+
     }
+    console.log(regionElementCont);
 }
 
 function capitalizeFirstLetter(string) {
     return string.charAt(0).toUpperCase() + string.slice(1);
 }
 
-function clickButton(){
+function clickButton(i) {
+
+    if (regionButtons[i].id == "selectedRegion") {
+        regionButtons[i].id = "";
+        selectedRegionButtons[i] = false;
+    } else {
+        regionButtons[i].id = "selectedRegion";
+        selectedRegionButtons[i] = true;
+    }
 
 }
 
 var store = [];
 
-var regionButtons= [];
+var regionButtons = [];
+
+var selectedRegionButtons = [];
 
 var populationPlaces = [populateStore];
 
