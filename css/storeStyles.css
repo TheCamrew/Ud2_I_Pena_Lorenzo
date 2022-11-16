@@ -1,0 +1,14 @@
+.main{
+    flex-direction: row;
+    background-color: var(--darkOrange);
+    background-image: none;
+}
+
+aside{
+    margin: 0;
+    width: 20vw;
+    height: 100%;
+}
+section{
+    width: 80vW;
+}
