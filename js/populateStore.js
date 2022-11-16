@@ -19,11 +19,8 @@ function populateRegion() {
 
         button.onclick = function () { clickButton(i); };
 
-        if (i == 0) {
-            button.id = "selectedRegion";
-            selectedRegionButtons.push(true);
-        }
-        selectedRegionButtons.push(false);
+        button.id = "selectedRegion";
+        selectedRegionButtons.push(true);
 
         regionButtons.push(button);
 
@@ -47,6 +44,21 @@ function clickButton(i) {
         selectedRegionButtons[i] = true;
     }
 
+    reloadGames();
+
+}
+
+function reloadGames() {
+    store = [];
+    document.getElementById("storeContainer").innerHTML = "";
+    games.forEach(item => {
+
+        regions.forEach(element => {
+            if (item.region == element) {
+                store.push(new Item(document.getElementById("storeContainer"), item.image, item.itemName, item.region, item.price, item.originalPrice));
+            }
+        });
+    });
 }
 
 var store = [];

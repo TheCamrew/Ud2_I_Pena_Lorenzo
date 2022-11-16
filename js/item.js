@@ -81,6 +81,7 @@ async function loadGames() {
     });
 }
 
+
 var games;
 
 var populationPlaces = [];
