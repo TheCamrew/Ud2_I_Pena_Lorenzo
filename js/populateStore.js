@@ -26,7 +26,6 @@ function populateRegion() {
         regionButtons.push(button);
 
         regionElementCont.appendChild(button);
-
     }
 }
 
