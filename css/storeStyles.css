@@ -5,7 +5,8 @@
 }
 
 aside {
-    width: 15vw;
+    width: 15%;
+    min-width: 200px;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -13,7 +14,7 @@ aside {
 }
 
 section {
-    width: 80vW;
+    width: 80%;
 }
 
 .asideItem {
@@ -36,6 +37,7 @@ section {
     transition: ease;
     transition-duration: 200ms;
     cursor: pointer;
+    box-shadow: 2px 2px 1px black;
 }
 
 #selectedRegion {

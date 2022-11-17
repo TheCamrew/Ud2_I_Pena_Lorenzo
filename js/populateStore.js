@@ -1,5 +1,3 @@
-const regionElementCont = document.getElementById("region");
-
 function populateStore() {
 
     games.forEach(item => {
@@ -52,14 +50,19 @@ function reloadGames() {
 
 
     games.forEach(item => {
-
-        selectedRegions.forEach(element => {
-            if (item.region == element) {
-                store.push(new Item(document.getElementById("storeContainer"), item.image, item.itemName, item.region, item.price, item.originalPrice));
-            }
-        });
+        console.log(item.itemName.toUpperCase().search(browserElement.value.toUpperCase()));
+        if (item.itemName.toUpperCase().search(browserElement.value.toUpperCase()) != -1 || browserElement.value == "") {
+            selectedRegions.forEach(element => {
+                if (item.region == element) {
+                    store.push(new Item(document.getElementById("storeContainer"), item.image, item.itemName, item.region, item.price, item.originalPrice));
+                }
+            });
+        }
     });
 }
+
+const regionElementCont = document.getElementById("region");
+const browserElement = document.getElementById("browser");
 
 var store = [];
 
