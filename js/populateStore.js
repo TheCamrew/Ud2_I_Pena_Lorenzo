@@ -1,7 +1,7 @@
 function populateStore() {
 
     games.forEach(item => {
-        store.push(new Item(document.getElementById("storeContainer"), item.image, item.itemName, item.region, item.price, item.originalPrice));
+        store.push(new Item(storeContainer, item.image, item.itemName, item.region, item.price, item.originalPrice));
     });
 }
 
@@ -46,21 +46,27 @@ function clickButton(i) {
 
 function reloadGames() {
     store = [];
-    document.getElementById("storeContainer").innerHTML = "";
+    storeContainer.innerHTML = "";
 
+    let count = 0;
 
     games.forEach(item => {
-        console.log(item.itemName.toUpperCase().search(browserElement.value.toUpperCase()));
         if (item.itemName.toUpperCase().search(browserElement.value.toUpperCase()) != -1 || browserElement.value == "") {
             selectedRegions.forEach(element => {
                 if (item.region == element) {
-                    store.push(new Item(document.getElementById("storeContainer"), item.image, item.itemName, item.region, item.price, item.originalPrice));
+                    store.push(new Item(storeContainer, item.image, item.itemName, item.region, item.price, item.originalPrice));
+                    count++;
                 }
             });
         }
     });
+
+    if (count == 0) {
+        storeContainer.innerHTML = "No se encontró ningún elemento :(";
+    }
 }
 
+const storeContainer = document.getElementById("storeContainer");
 const regionElementCont = document.getElementById("region");
 const browserElement = document.getElementById("browser");
 

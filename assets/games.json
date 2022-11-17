@@ -88,5 +88,14 @@
         "originalPrice": "3.99",
         "sales": "2",
         "releaseDate": "2012-04-23T18:25:43.511Z"
+    },
+    {
+        "itemName": "Among Us",
+        "image": "amongus.png",
+        "region": "3",
+        "price": "1.99",
+        "originalPrice": "3.99",
+        "sales": "102",
+        "releaseDate": "2012-04-23T18:25:43.511Z"
     }
 ]
