@@ -1,10 +1,3 @@
-function populateStore() {
-
-    games.forEach(item => {
-        store.push(new Item(storeContainer, item.image, item.itemName, item.region, item.price, item.originalPrice));
-    });
-}
-
 function populateRegion() {
 
     for (let i = 0; i < regions.length; i++) {
@@ -76,6 +69,6 @@ var regionButtons = [];
 
 var selectedRegions = [];
 
-var populationPlaces = [populateStore];
+var populationPlaces = [reloadGames];
 
 populateRegion();

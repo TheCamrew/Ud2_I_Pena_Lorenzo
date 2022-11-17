@@ -43,3 +43,9 @@ section {
 #selectedRegion {
     background-color: var(--accentColor);
 }
+
+body {
+    height: 100vh;
+    display: grid;
+    grid-template-rows: min-content auto min-content;
+}
