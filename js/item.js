@@ -47,8 +47,6 @@ class Item {
         let div = document.createElement("div");
         itemText.appendChild(div);
 
-
-
         let itemPrice = document.createElement("div");
         itemPrice.className = "itemPrice";
         itemPrice.innerHTML = this.price + "€";
@@ -62,7 +60,6 @@ class Item {
 }
 
 async function loadJson() {
-    var games;
     try {
         games = await fetch("../assets/games.json").then((response) => response.json()
         );
@@ -80,7 +77,6 @@ async function loadGames() {
         element();
     });
 }
-
 
 var games;
 
