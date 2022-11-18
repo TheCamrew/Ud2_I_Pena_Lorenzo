@@ -1,4 +1,13 @@
-function populateRegion() {
+function populateStore() {
+
+    games.forEach(item => {
+        storeItems.push(new Item(storeContainer, item.image, item.itemName, item.region, item.price, item.originalPrice));
+    });
+
+    reloadGames();
+}
+
+function generateRegion() {
 
     for (let i = 0; i < regions.length; i++) {
 
@@ -33,29 +42,34 @@ function clickButton(i) {
         regionButtons[i].id = "selectedRegion";
         selectedRegions[i] = i;
     }
-    console.log(selectedRegions);
     reloadGames();
 }
 
 function reloadGames() {
-    store = [];
-    storeContainer.innerHTML = "";
 
-    let count = 0;
+    if (count == 0) {
+        noItem.style.display = "none";
+    }
 
-    games.forEach(item => {
-        if (item.itemName.toUpperCase().search(browserElement.value.toUpperCase()) != -1 || browserElement.value == "") {
+    count = 0;
+
+    for (let i = 0; i < storeElements.length; i++) {
+        storeElements[i].style.display = "none";
+    }
+
+    for (let i = 0; i < games.length; i++) {
+        if (games[i].itemName.toUpperCase().search(browserElement.value.toUpperCase()) != -1 || browserElement.value == "") {
             selectedRegions.forEach(element => {
-                if (item.region == element) {
-                    store.push(new Item(storeContainer, item.image, item.itemName, item.region, item.price, item.originalPrice));
+                if (games[i].region == element) {
+                    storeElements[i].style.display = "block";
                     count++;
                 }
             });
         }
-    });
+    }
 
     if (count == 0) {
-        storeContainer.innerHTML = "No se encontró ningún elemento :(";
+        noItem.style.display = "block";
     }
 }
 
@@ -63,12 +77,20 @@ const storeContainer = document.getElementById("storeContainer");
 const regionElementCont = document.getElementById("region");
 const browserElement = document.getElementById("browser");
 
-var store = [];
-
 var regionButtons = [];
-
 var selectedRegions = [];
 
-var populationPlaces = [reloadGames];
+var storeItems = [];
+var storeElements = [];
 
-populateRegion();
+let temp = document.createElement("p");
+temp.innerHTML = "No se encontró ningún elemento :(";
+var noItem = storeContainer.appendChild(temp);
+
+var count = 0;
+
+var populationPlaces = [populateStore];
+
+generateRegion();
+
+storeElements = storeContainer.getElementsByClassName("defaultItem");
