@@ -49,3 +49,10 @@ body {
     display: grid;
     grid-template-rows: min-content auto min-content;
 }
+
+@container .ite (max-width: 780px) {
+
+    .menuHead {
+        flex-direction: column;
+    }
+}
