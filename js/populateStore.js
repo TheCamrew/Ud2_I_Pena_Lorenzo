@@ -37,8 +37,6 @@ function generateRegion() {
         if (!isIn) {
             avReg.push(regions[item.region]);
         }
-
-
     });
 
     for (let i = 0; i < regions.length; i++) {
@@ -96,7 +94,6 @@ function reloadGames() {
 
     for (let i = 0; i < games.length; i++) {
         if (games[i].itemName.toUpperCase().search(browserElement.value.toUpperCase()) != -1 || browserElement.value == "") {
-            console.log(minPrice.value + " " + maxPrice.value + " " + games[i].price);
             if (parseFloat(games[i].price) >= minPrice.value && parseFloat(games[i].price) <= maxPrice.value) {
                 selectedRegions.forEach(element => {
                     if (games[i].region == element) {

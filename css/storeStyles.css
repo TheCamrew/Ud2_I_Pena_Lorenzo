@@ -65,4 +65,5 @@ input::-webkit-inner-spin-button {
 input[type=number] {
     -moz-appearance: textfield;
     width: 40%;
+    text-align: center;
 }
