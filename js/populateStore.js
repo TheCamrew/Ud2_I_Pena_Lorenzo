@@ -132,9 +132,9 @@ function reloadGames() {
                 selectedRegions.forEach(region => {
                     if (games[i].region == region) {
                         selectedGenres.forEach(genre => {
+                            console.log(genre);
                             games[i].genres.forEach(itemGenre => {
                                 if (genre == itemGenre) {
-
                                     storeElements[i].style.display = "block";
                                     count++;
                                 }
