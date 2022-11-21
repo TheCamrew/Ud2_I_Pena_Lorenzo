@@ -18,6 +18,7 @@ function populateStore() {
 
     generateGenres();
     generateRegions();
+    generateModes();
 
     reloadGames();
 }
@@ -28,7 +29,7 @@ function generateGenres() {
 
         let button = document.createElement("button");
 
-        button.className = "button";
+        button.classList.add("button", "genre");
 
         button.innerHTML = capitalizeFirstLetter(genres[i]);
 
@@ -66,11 +67,11 @@ function generateRegions() {
 
         let button = document.createElement("button");
 
-        button.classList.add("button", "region");
+        button.classList.add("button");
 
         button.innerHTML = capitalizeFirstLetter(regions[i]);
 
-        button.onclick = function () { updateButton(i, regionButtons,  selectedRegions); };
+        button.onclick = function () { updateButton(i, regionButtons, selectedRegions); };
 
         avReg.forEach(element => {
             if (regions[i] == element) {
@@ -83,6 +84,28 @@ function generateRegions() {
         regionButtons.push(button);
 
         regionElementCont.appendChild(button);
+    }
+}
+
+function generateModes() {
+
+    for (let i = 0; i < modes.length; i++) {
+
+        let button = document.createElement("button");
+
+        button.classList.add("button");
+
+        button.innerHTML = capitalizeFirstLetter(modes[i]);
+
+        button.onclick = function () { updateButton(i, modeButtons, selectedModes); };
+
+        button.id = "selected";
+
+        selectedModes.push(i);
+
+        modeButtons.push(button);
+
+        modesElementCont.appendChild(button);
     }
 }
 
@@ -140,11 +163,18 @@ function reloadGames() {
 }
 
 const storeContainer = document.getElementById("storeContainer");
+
+const browserElement = document.getElementById("browser");
+
 const genreElementCont = document.getElementById("genres");
 const regionElementCont = document.getElementById("region");
-const browserElement = document.getElementById("browser");
+const modesElementCont = document.getElementById("modes");
+
 const minPrice = document.getElementById("minPrice");
 const maxPrice = document.getElementById("maxPrice");
+
+var storeItems = [];
+var storeElements = [];
 
 var genresButtons = [];
 var selectedGenres = [];
@@ -152,8 +182,8 @@ var selectedGenres = [];
 var regionButtons = [];
 var selectedRegions = [];
 
-var storeItems = [];
-var storeElements = [];
+var modeButtons = [];
+var selectedModes = [];
 
 let temp = document.createElement("p");
 temp.innerHTML = "No se encontró ningún elemento :(";

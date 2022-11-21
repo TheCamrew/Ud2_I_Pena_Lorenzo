@@ -43,10 +43,31 @@ section {
     background-color: var(--accentColor);
 }
 
+.genre{
+    width: 30%;
+}
+
+@media (max-width: 1460px) {
+
+    .genre {
+        width: 45%;
+    }
+}@media (max-width: 1020px) {
+
+    .genre {
+        width: 100%;
+    }
+}
+
 body {
     height: 100vh;
     display: grid;
     grid-template-rows: min-content auto min-content;
+}
+#genres{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
 
 @container .ite (max-width: 780px) {
