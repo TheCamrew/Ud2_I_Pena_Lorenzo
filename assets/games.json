@@ -6,7 +6,10 @@
         "price": "17",
         "originalPrice": "21",
         "sales": "2",
-        "releaseDate": "2012-04-23T18:25:43.511Z"
+        "releaseDate": "2012-04-23",
+        "genres":[
+          "obama"
+          ]
     },
     {
         "itemName": "Payaso Esponja Horror Abuelita miedo",
@@ -15,7 +18,10 @@
         "price": "17",
         "originalPrice": "21",
         "sales": "2",
-        "releaseDate": "2012-04-23T18:25:43.511Z"
+        "releaseDate": "2012-04-23",
+        "genres":[
+          "obama"
+          ]
     },
     {
         "itemName": "Fortnite",
@@ -24,7 +30,10 @@
         "price": "17",
         "originalPrice": "21",
         "sales": "2",
-        "releaseDate": "2012-04-23T18:25:43.511Z"
+        "releaseDate": "2012-04-23",
+        "genres":[
+          "obama"
+          ]
     },
     {
         "itemName": "Minecraft",
@@ -33,7 +42,10 @@
         "price": "15.99",
         "originalPrice": "24.99",
         "sales": "2",
-        "releaseDate": "2012-04-23T18:25:43.511Z"
+        "releaseDate": "2012-04-23",
+        "genres":[
+          "obama"
+          ]
     },
     {
         "itemName": "Geometry Dash",
@@ -42,7 +54,10 @@
         "price": "0.99",
         "originalPrice": "3.99",
         "sales": "2",
-        "releaseDate": "2012-04-23T18:25:43.511Z"
+        "releaseDate": "2012-04-23",
+        "genres":[
+          "obama"
+          ]
     },
     {
         "itemName": "Age Of Empires 3",
@@ -51,7 +66,10 @@
         "price": "30.99",
         "originalPrice": "39.99",
         "sales": "2",
-        "releaseDate": "2012-04-23T18:25:43.511Z"
+        "releaseDate": "2012-04-23",
+        "genres":[
+          "obama"
+          ]
     },
     {
         "itemName": "Buscaminas",
@@ -60,7 +78,10 @@
         "price": "0.99",
         "originalPrice": "1.99",
         "sales": "2",
-        "releaseDate": "2012-04-23T18:25:43.511Z"
+        "releaseDate": "2012-04-23",
+        "genres":[
+          "obama"
+          ]
     },
     {
         "itemName": "Elden Ring",
@@ -69,7 +90,10 @@
         "price": "43.99",
         "originalPrice": "59.99",
         "sales": "200",
-        "releaseDate": "2018-04-23T18:25:43.511Z"
+        "releaseDate": "2018-04-23",
+        "genres":[
+          "obama"
+          ]
     },
     {
         "itemName": "Hello Kitty Online",
@@ -78,7 +102,10 @@
         "price": "198.99",
         "originalPrice": "199.99",
         "sales": "20",
-        "releaseDate": "2012-04-23T18:25:43.511Z"
+        "releaseDate": "2012-04-23",
+        "genres":[
+          "obama"
+          ]
     },
     {
         "itemName": "Cookie Clicker",
@@ -87,7 +114,10 @@
         "price": "1.99",
         "originalPrice": "3.99",
         "sales": "2",
-        "releaseDate": "2012-04-23T18:25:43.511Z"
+        "releaseDate": "2012-04-23",
+        "genres":[
+          "obama"
+          ]
     },
     {
         "itemName": "Among Us",
@@ -96,6 +126,9 @@
         "price": "1.99",
         "originalPrice": "3.99",
         "sales": "102",
-        "releaseDate": "2012-04-23T18:25:43.511Z"
+        "releaseDate": "2012-04-23",
+        "genres":[
+          "obama"
+          ]
     }
 ]
