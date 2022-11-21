@@ -1,4 +1,5 @@
-const regions = ["global", "europa", "asia", "africa", "oceania", "america", "antartida"];
+const regions = ["Global", "Europa", "Asia", "África", "Oceania", "América", "Antártida"];
+const genres = ["Acción", "Aventura","Supervivencia","Mundo Abierto", "Battle Royale"];
 
 class Item {
     image;
