@@ -1,13 +1,47 @@
 function populateStore() {
 
+    let min = 999999;
+    let max = 0;
+
     games.forEach(item => {
         storeItems.push(new Item(storeContainer, item.image, item.itemName, item.region, item.price, item.originalPrice));
+        if (parseFloat(item.price) < min) {
+            min = parseFloat(item.price);
+        }
+        if (parseFloat(item.price) > max) {
+            max = parseFloat(item.price);
+        }
     });
+
+    minPrice.value = min;
+    maxPrice.value = max;
+
+    generateRegion()
 
     reloadGames();
 }
 
 function generateRegion() {
+
+    let avReg = [];
+
+    games.forEach(item => {
+        let isIn = false;
+
+        avReg.forEach(element => {
+            if (item.region == element) {
+                isIn = true;
+            }
+        });
+
+        if (!isIn) {
+            avReg.push(regions[item.region]);
+        }
+
+
+    });
+
+    console.log(regions);
 
     for (let i = 0; i < regions.length; i++) {
 
@@ -19,7 +53,12 @@ function generateRegion() {
 
         button.onclick = function () { clickButton(i); };
 
-        button.id = "selectedRegion";
+        avReg.forEach(element => {
+            if (regions[i] == element) {
+                button.id = "selectedRegion";
+            }
+        });
+
 
         selectedRegions.push(i);
 
@@ -59,12 +98,15 @@ function reloadGames() {
 
     for (let i = 0; i < games.length; i++) {
         if (games[i].itemName.toUpperCase().search(browserElement.value.toUpperCase()) != -1 || browserElement.value == "") {
-            selectedRegions.forEach(element => {
-                if (games[i].region == element) {
-                    storeElements[i].style.display = "block";
-                    count++;
-                }
-            });
+            console.log(minPrice.value + " " + maxPrice.value + " " + games[i].price);
+            if (parseFloat(games[i].price) >= minPrice.value && parseFloat(games[i].price) <= maxPrice.value) {
+                selectedRegions.forEach(element => {
+                    if (games[i].region == element) {
+                        storeElements[i].style.display = "block";
+                        count++;
+                    }
+                });
+            }
         }
     }
 
@@ -76,6 +118,8 @@ function reloadGames() {
 const storeContainer = document.getElementById("storeContainer");
 const regionElementCont = document.getElementById("region");
 const browserElement = document.getElementById("browser");
+const minPrice = document.getElementById("minPrice");
+const maxPrice = document.getElementById("maxPrice");
 
 var regionButtons = [];
 var selectedRegions = [];
@@ -90,7 +134,5 @@ var noItem = storeContainer.appendChild(temp);
 var count = 0;
 
 var populationPlaces = [populateStore];
-
-generateRegion();
 
 storeElements = storeContainer.getElementsByClassName("defaultItem");
