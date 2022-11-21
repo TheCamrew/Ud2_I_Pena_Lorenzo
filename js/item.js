@@ -1,5 +1,6 @@
 const regions = ["Global", "Europa", "Asia", "África", "Oceania", "América", "Antártida"];
-const genres = ["Acción", "Aventura","Supervivencia","Mundo Abierto", "Battle Royale"];
+const genres = ["Acción", "Aventura", "Horror", "Supervivencia", "Mundo Abierto", "Battle Royale", "Sandbox", "Plataformas", "Ritmo", "RTS", "Puzzles", "Disparos", "RPG", "MMORPG", "Incremental", "Deducción"];
+const modes = ["Un Jugador", "Multijugador", "Cooperativo"];
 
 class Item {
     image;

@@ -21,7 +21,7 @@
         "sales": "2",
         "releaseDate": "2012-04-23",
         "genres": [
-            "obama"
+            "2"
         ]
     },
     {
@@ -33,7 +33,10 @@
         "sales": "2",
         "releaseDate": "2012-04-23",
         "genres": [
-            "obama"
+            "3",
+            "4",
+            "5",
+            "12"
         ]
     },
     {
@@ -45,7 +48,8 @@
         "sales": "2",
         "releaseDate": "2012-04-23",
         "genres": [
-            "obama"
+            "4",
+            "6"
         ]
     },
     {
@@ -57,7 +61,8 @@
         "sales": "2",
         "releaseDate": "2012-04-23",
         "genres": [
-            "obama"
+            "7",
+            "8"
         ]
     },
     {
@@ -69,7 +74,7 @@
         "sales": "2",
         "releaseDate": "2012-04-23",
         "genres": [
-            "obama"
+            "9"
         ]
     },
     {
@@ -81,7 +86,7 @@
         "sales": "2",
         "releaseDate": "2012-04-23",
         "genres": [
-            "obama"
+            "10"
         ]
     },
     {
@@ -93,7 +98,9 @@
         "sales": "200",
         "releaseDate": "2018-04-23",
         "genres": [
-            "obama"
+            "1",
+            "4",
+            "13"
         ]
     },
     {
@@ -105,7 +112,7 @@
         "sales": "20",
         "releaseDate": "2012-04-23",
         "genres": [
-            "obama"
+            "14"
         ]
     },
     {
@@ -117,7 +124,7 @@
         "sales": "2",
         "releaseDate": "2012-04-23",
         "genres": [
-            "obama"
+            "15"
         ]
     },
     {
@@ -129,7 +136,7 @@
         "sales": "102",
         "releaseDate": "2012-04-23",
         "genres": [
-            "obama"
+            "16"
         ]
     }
 ]
