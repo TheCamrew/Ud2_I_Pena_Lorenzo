@@ -47,14 +47,13 @@ function generateRegion() {
 
         button.innerHTML = capitalizeFirstLetter(regions[i]);
 
-        button.onclick = function () { clickButton(i); };
+        button.onclick = function () { updateRegion(i); };
 
         avReg.forEach(element => {
             if (regions[i] == element) {
                 button.id = "selectedRegion";
             }
         });
-
 
         selectedRegions.push(i);
 
@@ -68,7 +67,7 @@ function capitalizeFirstLetter(string) {
     return string.charAt(0).toUpperCase() + string.slice(1);
 }
 
-function clickButton(i) {
+function updateRegion(i) {
 
     if (regionButtons[i].id == "selectedRegion") {
         regionButtons[i].id = "";
