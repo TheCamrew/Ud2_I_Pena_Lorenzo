@@ -16,12 +16,47 @@ function populateStore() {
     minPrice.value = min;
     maxPrice.value = max;
 
-    generateRegion()
+    generateGenres();
+    generateRegions();
 
     reloadGames();
 }
 
-function generateRegion() {
+function generateGenres() {
+
+    for (let i = 0; i < genres.length; i++) {
+
+        let button = document.createElement("button");
+
+        button.className = "genItem";
+
+        button.innerHTML = capitalizeFirstLetter(genres[i]);
+
+        button.onclick = function () { updateGenre(i); };
+
+        button.id = "selectedGenre";
+
+        selectedGenres.push(i);
+
+        genresButtons.push(button);
+
+        genreElementCont.appendChild(button);
+    }
+}
+
+function updateGenre(i) {
+
+    if (genresButtons[i].id == "selectedGenre") {
+        genresButtons[i].id = "";
+        selectedGenres[i] = -1;
+    } else {
+        genresButtons[i].id = "selectedGenre";
+        selectedGenres[i] = i;
+    }
+    reloadGames();
+}
+
+function generateRegions() {
 
     let avReg = [];
 
@@ -63,10 +98,6 @@ function generateRegion() {
     }
 }
 
-function capitalizeFirstLetter(string) {
-    return string.charAt(0).toUpperCase() + string.slice(1);
-}
-
 function updateRegion(i) {
 
     if (regionButtons[i].id == "selectedRegion") {
@@ -77,6 +108,10 @@ function updateRegion(i) {
         selectedRegions[i] = i;
     }
     reloadGames();
+}
+
+function capitalizeFirstLetter(string) {
+    return string.charAt(0).toUpperCase() + string.slice(1);
 }
 
 function reloadGames() {
@@ -110,10 +145,14 @@ function reloadGames() {
 }
 
 const storeContainer = document.getElementById("storeContainer");
+const genreElementCont = document.getElementById("genres");
 const regionElementCont = document.getElementById("region");
 const browserElement = document.getElementById("browser");
 const minPrice = document.getElementById("minPrice");
 const maxPrice = document.getElementById("maxPrice");
+
+var genresButtons = [];
+var selectedGenres = [];
 
 var regionButtons = [];
 var selectedRegions = [];
