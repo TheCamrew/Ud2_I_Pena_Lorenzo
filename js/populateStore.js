@@ -32,9 +32,9 @@ function generateGenres() {
 
         button.innerHTML = capitalizeFirstLetter(genres[i]);
 
-        button.onclick = function () { updateGenre(i); };
+        button.onclick = function () { updateButton(i, genresButtons, selectedGenres); };
 
-        button.id = "selectedGenre";
+        button.id = "selected";
 
         selectedGenres.push(i);
 
@@ -42,18 +42,6 @@ function generateGenres() {
 
         genreElementCont.appendChild(button);
     }
-}
-
-function updateGenre(i) {
-
-    if (genresButtons[i].id == "selectedGenre") {
-        genresButtons[i].id = "";
-        selectedGenres[i] = -1;
-    } else {
-        genresButtons[i].id = "selectedGenre";
-        selectedGenres[i] = i;
-    }
-    reloadGames();
 }
 
 function generateRegions() {
@@ -78,15 +66,15 @@ function generateRegions() {
 
         let button = document.createElement("button");
 
-        button.className = "button";
+        button.classList.add("button", "region");
 
         button.innerHTML = capitalizeFirstLetter(regions[i]);
 
-        button.onclick = function () { updateRegion(i); };
+        button.onclick = function () { updateButton(i, regionButtons,  selectedRegions); };
 
         avReg.forEach(element => {
             if (regions[i] == element) {
-                button.id = "selectedRegion";
+                button.id = "selected";
             }
         });
 
@@ -98,14 +86,14 @@ function generateRegions() {
     }
 }
 
-function updateRegion(i) {
+function updateButton(i, buttons, selected) {
 
-    if (regionButtons[i].id == "selectedRegion") {
-        regionButtons[i].id = "";
-        selectedRegions[i] = -1;
+    if (buttons[i].id == "selected") {
+        buttons[i].id = "";
+        selected[i] = -1;
     } else {
-        regionButtons[i].id = "selectedRegion";
-        selectedRegions[i] = i;
+        buttons[i].id = "selected";
+        selected[i] = i;
     }
     reloadGames();
 }

@@ -39,11 +39,7 @@ section {
     box-shadow: 2px 2px 1px black;
 }
 
-#selectedRegion {
-    background-color: var(--accentColor);
-}
-
-#selectedGenre {
+#selected {
     background-color: var(--accentColor);
 }
 
