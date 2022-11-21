@@ -20,7 +20,7 @@ section {
     margin: 10px;
 }
 
-.regItem {
+.button {
     background-color: var(--darkOrange);
     padding-top: 5px;
     padding-bottom: 5px;
@@ -30,7 +30,7 @@ section {
     width: 100%;
 }
 
-.regItem:hover {
+.button:hover {
     background-color: var(--lightAccentColor);
     transform: scale(1.03);
     transition: ease;
@@ -40,6 +40,10 @@ section {
 }
 
 #selectedRegion {
+    background-color: var(--accentColor);
+}
+
+#selectedGenre {
     background-color: var(--accentColor);
 }
 

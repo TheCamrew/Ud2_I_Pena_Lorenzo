@@ -28,7 +28,7 @@ function generateGenres() {
 
         let button = document.createElement("button");
 
-        button.className = "genItem";
+        button.className = "button";
 
         button.innerHTML = capitalizeFirstLetter(genres[i]);
 
@@ -78,7 +78,7 @@ function generateRegions() {
 
         let button = document.createElement("button");
 
-        button.className = "regItem";
+        button.className = "button";
 
         button.innerHTML = capitalizeFirstLetter(regions[i]);
 
@@ -129,10 +129,17 @@ function reloadGames() {
     for (let i = 0; i < games.length; i++) {
         if (games[i].itemName.toUpperCase().search(browserElement.value.toUpperCase()) != -1 || browserElement.value == "") {
             if (parseFloat(games[i].price) >= minPrice.value && parseFloat(games[i].price) <= maxPrice.value) {
-                selectedRegions.forEach(element => {
-                    if (games[i].region == element) {
-                        storeElements[i].style.display = "block";
-                        count++;
+                selectedRegions.forEach(region => {
+                    if (games[i].region == region) {
+                        selectedGenres.forEach(genre => {
+                            games[i].genres.forEach(itemGenre => {
+                                if (genre == itemGenre) {
+
+                                    storeElements[i].style.display = "block";
+                                    count++;
+                                }
+                            });
+                        });
                     }
                 });
             }
