@@ -41,8 +41,6 @@ function generateRegion() {
 
     });
 
-    console.log(regions);
-
     for (let i = 0; i < regions.length; i++) {
 
         let button = document.createElement("button");
