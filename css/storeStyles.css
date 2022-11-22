@@ -10,12 +10,12 @@ aside {
     flex-direction: column;
     justify-content: flex-start;
     align-self: self-start;
-    width: 25vw;
+    width: 25%;
 }
 
 section {
     border: none;
-    width: 75vw;
+    width: 75%;
     padding: 0;
 }
 
@@ -64,11 +64,11 @@ section {
 
 @media (max-width: 540px) {
     aside {
-        width: 50vw;
+        width: 50%;
     }
 
     section {
-        width: 50vw;
+        width: 50%;
         min-width: 0;
     }
 }
