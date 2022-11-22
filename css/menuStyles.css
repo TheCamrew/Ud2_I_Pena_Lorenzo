@@ -62,6 +62,7 @@
 
     .menu {
         flex-direction: column;
+        width: 100vw;
     }
 
     .menu:hover .menuItem {
