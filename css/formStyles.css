@@ -49,10 +49,10 @@ textarea {
 }
 
 section {
-    padding-bottom: 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding-bottom: 20px;
 }
 
 .radio {

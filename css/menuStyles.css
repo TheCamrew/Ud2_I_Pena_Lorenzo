@@ -57,9 +57,6 @@
     .menuHead {
         flex-direction: column;
     }
-}
-
-@media (max-width: 666px) {
 
     .menuCont {
         flex-direction: column;
