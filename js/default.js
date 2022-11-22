@@ -1,7 +1,7 @@
 window.onload = function () {
     var main = document.getElementById("main");
 
-    main.style.backgroundPosition = "center -50000px";
+    main.style.backgroundPosition = "center -40000px";
 
     var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
     (function () {
