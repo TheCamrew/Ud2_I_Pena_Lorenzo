@@ -13,7 +13,7 @@
     font-family: Okine;
 }
 
-body{
+body {
     display: grid;
     grid-template-rows: min-content auto min-content;
     height: 100vh;
@@ -113,8 +113,15 @@ header {
     align-items: center;
     background-image: url(../img/bg.png);
     background-size: 10%;
+    background-position: center 0px;
     background-attachment: fixed;
     background-color: var(--accentColor);
+}
+
+.main:hover {
+    transition: linear;
+    transition-duration: 3600000ms;
+    background-position: center -50000px;
 }
 
 /*SECTIONMAIN*/
