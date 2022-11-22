@@ -5,18 +5,18 @@
     flex-wrap: wrap;
 }
 
+section {
+    border: none;
+    width: 74%;
+    border-right: 2px solid black;
+}
+
 aside {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-self: self-start;
     width: 25%;
-}
-
-section {
-    border: none;
-    width: 75%;
-    padding: 0;
 }
 
 .asideItem {
@@ -63,13 +63,13 @@ section {
 }
 
 @media (max-width: 540px) {
-    aside {
-        width: 50%;
-    }
-
     section {
         width: 50%;
         min-width: 0;
+    }
+
+    aside {
+        width: 49%;
     }
 }
 
