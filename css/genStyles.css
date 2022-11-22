@@ -112,8 +112,7 @@ header {
     flex-direction: column;
     align-items: center;
     background-image: url(../img/bg.png);
-    background-size: auto;
-    background-position: center center;
+    background-size: 10%;
     background-attachment: fixed;
     background-color: var(--accentColor);
 }
