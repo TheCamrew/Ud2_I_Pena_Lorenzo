@@ -116,11 +116,12 @@ header {
     background-position: center 0px;
     background-attachment: fixed;
     background-color: var(--accentColor);
+    
+    transition: linear;
+    transition-duration: 3600000ms;
 }
 
 .main:hover {
-    transition: linear;
-    transition-duration: 3600000ms;
     background-position: center -50000px;
 }
 
