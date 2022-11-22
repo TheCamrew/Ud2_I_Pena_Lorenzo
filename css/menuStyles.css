@@ -1,14 +1,18 @@
 /*MENU*/
 
 .menu {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    padding-left: 17.5%;
-    padding-right: 17.5%;
     background-color: var(--darkOrange);
     align-items: center;
     border-bottom: 2px solid black;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.menuCont {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
     width: var(--mainWidth);
 }
 
@@ -58,9 +62,9 @@
 
 @media (max-width: 666px) {
 
-    .menu {
+    .menuCont {
         flex-direction: column;
-        width: 100vw;
+        width: 100%;
     }
 
     .menu:hover .menuItem {
@@ -81,7 +85,7 @@
 
     .menuItem {
         display: none;
-        width: 100vw;
+        width: 100%;
     }
 
     #currentMenu {

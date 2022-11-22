@@ -48,7 +48,6 @@ header {
     background-color: var(--brightOrange);
     padding-top: 1%;
     padding-bottom: 1%;
-
     width: var(--mainWidth);
 }
 
@@ -111,7 +110,6 @@ header {
     background-position: center center;
     background-attachment: fixed;
     background-color: var(--accentColor);
-    width: 100vw;
 }
 
 /*SECTIONMAIN*/
