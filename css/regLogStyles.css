@@ -20,7 +20,6 @@ section {
     border: 0;
     background-color: var(--darkOrange);
     border-radius: 20px;
-    padding: 20px;
     max-width: 500px;
     display: flex;
     flex-direction: column;

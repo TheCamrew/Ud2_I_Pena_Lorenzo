@@ -1,5 +1,5 @@
 :root {
-    --mainWidth: 65%;
+    --mainWidth: 65vw;
     --brightOrange: #E08229;
     --darkOrange: #D6771F;
     --darkerOrange: #D0731C;
@@ -97,13 +97,8 @@ header {
 .shopIcon {
     width: var(--mainWidth);
     background-color: transparent;
-}
-
-.shoppingCart:hover .shopIcon {
     width: 65%;
 }
-
-
 
 /*MAIN*/
 
