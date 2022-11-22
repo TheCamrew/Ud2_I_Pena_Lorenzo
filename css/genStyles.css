@@ -121,10 +121,6 @@ header {
     transition-duration: 3600000ms;
 }
 
-.main:hover {
-    background-position: center -50000px;
-}
-
 /*SECTIONMAIN*/
 
 section {
