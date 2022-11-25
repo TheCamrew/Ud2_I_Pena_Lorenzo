@@ -43,7 +43,7 @@ class Item {
 
         let image = document.createElement("img");
         image.className = "itemImage";
-        image.src = "img/itemImages/" + this.image;
+        image.src = "img/itemImages/" + this.image + ".png";
         item.appendChild(image);
 
         let itemInfo = document.createElement("div");

@@ -14,14 +14,13 @@ function populateRecentLaunch() {
         if (counter >= startGameAmount) {
             return;
         }
-        mostSold.push(new Item(document.getElementById("mostSold"), item.image, item.itemName, item.region, item.price, item.originalPrice));
+        recentLaunch.push(new Item(document.getElementById("recent"), item.image, item.itemName, item.region, item.price, item.originalPrice));
         counter++;
     });
 }
 
 function populateMostSold() {
-
-    games.sort((a, b) => (a.sales < b.sales) ? 1 : -1);
+    games.sort((a, b) => b.sales - a.sales);
 
     let counter = 0;
 
@@ -29,7 +28,8 @@ function populateMostSold() {
         if (counter >= startGameAmount) {
             return;
         }
-        recentLaunch.push(new Item(document.getElementById("recent"), item.image, item.itemName, item.region, item.price, item.originalPrice));
+        console.log(item.sales);
+        mostSold.push(new Item(document.getElementById("mostSold"), item.image, item.itemName, item.region, item.price, item.originalPrice));
         counter++;
     });
 }
