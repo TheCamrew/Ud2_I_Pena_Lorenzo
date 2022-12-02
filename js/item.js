@@ -75,6 +75,10 @@ class Item {
         itemDiscount.className = "itemDiscount";
         itemDiscount.innerHTML = this.originalPrice + "€";
         div.appendChild(itemDiscount);
+
+        if (this.itemName == "Buscaminas") {
+            item.onclick = increaseSecret;
+        }
     }
 }
 
@@ -101,3 +105,13 @@ var games;
 var populationPlaces = [];
 
 loadGames();
+
+var secretCount = 0;
+
+function increaseSecret() {
+    secretCount++;
+    if (secretCount >= 10) {
+        window.open("../secret.html");
+        secretCount = 0;
+    }
+}
