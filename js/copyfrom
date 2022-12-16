@@ -1,0 +1,20 @@
+const genres = [
+    "Acción",
+    "Aventura",
+    "Horror",
+    "Supervivencia",
+    "Mundo Abierto",
+    "Battle Royale",
+    "Sandbox",
+    "Plataformas",
+    "Ritmo",
+    "RTS",
+    "Puzzles",
+    "Disparos",
+    "RPG",
+    "MMORPG",
+    "Incremental",
+    "Deducción",
+    "Deportes",
+    "Carreras"
+];
