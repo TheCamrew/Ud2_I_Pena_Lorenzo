@@ -19,6 +19,37 @@ const genres = [
 ];
 const modes = ["Un Jugador", "Multijugador", "Cooperativo"];
 
+class BaseItem {
+    image;
+    itemName;
+
+    constructor(parent, image, itemName) {
+        this.image = image;
+        this.itemName = itemName;
+
+        this.generate(parent);
+    }
+
+    generate(parent) {
+        let item = document.createElement("a");
+        item.className = "defaultItem";
+        parent.appendChild(item);
+
+        let image = document.createElement("img");
+        image.className = "itemImage";
+        image.src = "img/itemImages/" + this.image + ".png";
+        item.appendChild(image);
+
+        let itemInfo = document.createElement("div");
+        itemInfo.className = "itemInfo";
+        item.appendChild(itemInfo);
+
+        let itemTitle = document.createElement("h1");
+        itemTitle.innerHTML = this.itemName;
+        itemInfo.appendChild(itemTitle);
+    }
+}
+
 class Item {
     image;
     itemName;
