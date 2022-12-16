@@ -1,4 +1,4 @@
-const startGameAmount = 1;
+const button = document.getElementById("button");
 
 var recentLaunch;
 
@@ -11,3 +11,5 @@ function populateRecentLaunch() {
 }
 
 var populationPlaces = [populateRecentLaunch];
+
+button.addEventListener("click", function () { console.log("ajajsi"); });

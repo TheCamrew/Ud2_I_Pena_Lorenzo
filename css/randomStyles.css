@@ -9,3 +9,12 @@ section {
 .itemInfo {
     margin: 20px;
 }
+
+section {
+    display: flex;
+    flex-direction: column;
+}
+
+.sendButton {
+    width: 256px;
+}
