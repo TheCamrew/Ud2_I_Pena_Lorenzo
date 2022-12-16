@@ -12,4 +12,7 @@ function populateRecentLaunch() {
 
 var populationPlaces = [populateRecentLaunch];
 
-button.addEventListener("click", function () { console.log("ajajsi"); });
+button.addEventListener("click", function () {
+    recentLaunch.itemName = "obamna";
+    recentLaunch.regenerate();
+});

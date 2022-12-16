@@ -22,18 +22,40 @@ const modes = ["Un Jugador", "Multijugador", "Cooperativo"];
 class BaseItem {
     image;
     itemName;
+    parent;
 
     constructor(parent, image, itemName) {
         this.image = image;
         this.itemName = itemName;
+        this.parent = parent;
 
-        this.generate(parent);
+        this.generate(this.parent);
     }
 
-    generate(parent) {
+    generate() {
         let item = document.createElement("a");
         item.className = "defaultItem";
-        parent.appendChild(item);
+        this.parent.appendChild(item);
+
+        let image = document.createElement("img");
+        image.className = "itemImage";
+        image.src = "img/itemImages/" + this.image + ".png";
+        item.appendChild(image);
+
+        let itemInfo = document.createElement("div");
+        itemInfo.className = "itemInfo";
+        item.appendChild(itemInfo);
+
+        let itemTitle = document.createElement("h1");
+        itemTitle.innerHTML = this.itemName;
+        itemInfo.appendChild(itemTitle);
+    }
+
+    regenerate() {
+        this.parent.innerHTML = "";
+        let item = document.createElement("a");
+        item.className = "defaultItem";
+        this.parent.appendChild(item);
 
         let image = document.createElement("img");
         image.className = "itemImage";
@@ -63,14 +85,15 @@ class Item {
         this.region = regions[region];
         this.price = price;
         this.originalPrice = originalPrice;
+        this.parent = parent;
 
-        this.generate(parent);
+        this.generate(this.parent);
     }
 
-    generate(parent) {
+    generate() {
         let item = document.createElement("a");
         item.className = "defaultItem";
-        parent.appendChild(item);
+        this.parent.appendChild(item);
 
         let image = document.createElement("img");
         image.className = "itemImage";
