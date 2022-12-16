@@ -2,6 +2,16 @@ const startGameAmount = 8;
 
 var recentLaunch = Array();
 var mostSold = Array();
+var populationPlaces;
+
+load();
+
+async function load() {
+    populationPlaces = [populateRecentLaunch,
+        populateMostSold,
+        populateBestPrice
+    ];
+}
 
 function populateRecentLaunch() {
 
@@ -48,8 +58,3 @@ function populateBestPrice() {
         counter++;
     });
 }
-
-var populationPlaces = [populateRecentLaunch,
-    populateMostSold,
-    populateBestPrice
-];

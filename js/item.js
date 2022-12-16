@@ -23,6 +23,8 @@ class BaseItem {
     image;
     itemName;
     parent;
+    nameRef;
+    imageRef;
 
     constructor(parent, image, itemName) {
         this.image = image;
@@ -37,38 +39,23 @@ class BaseItem {
         item.className = "defaultItem";
         this.parent.appendChild(item);
 
-        let image = document.createElement("img");
-        image.className = "itemImage";
-        image.src = "img/itemImages/" + this.image + ".png";
-        item.appendChild(image);
+        this.imageRef = document.createElement("img");
+        this.imageRef.className = "itemImage";
+        this.imageRef.src = "img/itemImages/" + this.image + ".png";
+        item.appendChild(this.imageRef);
 
         let itemInfo = document.createElement("div");
         itemInfo.className = "itemInfo";
         item.appendChild(itemInfo);
 
-        let itemTitle = document.createElement("h1");
-        itemTitle.innerHTML = this.itemName;
-        itemInfo.appendChild(itemTitle);
+        this.nameRef = document.createElement("h1");
+        this.nameRef.innerHTML = this.itemName;
+        itemInfo.appendChild(this.nameRef);
     }
 
-    regenerate() {
-        this.parent.innerHTML = "";
-        let item = document.createElement("a");
-        item.className = "defaultItem";
-        this.parent.appendChild(item);
-
-        let image = document.createElement("img");
-        image.className = "itemImage";
-        image.src = "img/itemImages/" + this.image + ".png";
-        item.appendChild(image);
-
-        let itemInfo = document.createElement("div");
-        itemInfo.className = "itemInfo";
-        item.appendChild(itemInfo);
-
-        let itemTitle = document.createElement("h1");
-        itemTitle.innerHTML = this.itemName;
-        itemInfo.appendChild(itemTitle);
+    change() {
+        this.nameRef.innerHTML = this.itemName;
+        this.imageRef.src = "img/itemImages/" + this.image + ".png";
     }
 }
 

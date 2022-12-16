@@ -1,3 +1,42 @@
+const storeContainer = document.getElementById("storeContainer");
+
+const browserElement = document.getElementById("browser");
+
+const genreElementCont = document.getElementById("genres");
+const regionElementCont = document.getElementById("region");
+const modesElementCont = document.getElementById("modes");
+
+const minPrice = document.getElementById("minPrice");
+const maxPrice = document.getElementById("maxPrice");
+
+var storeItems = [];
+var storeElements = [];
+
+var genresButtons = [];
+var selectedGenres = [];
+
+var regionButtons = [];
+var selectedRegions = [];
+
+var modeButtons = [];
+var selectedModes = [];
+
+let temp = document.createElement("p");
+temp.innerHTML = "No se encontró ningún elemento :(";
+var noItem = storeContainer.appendChild(temp);
+
+var count = 0;
+
+var populationPlaces;
+
+load();
+
+async function load() {
+    populationPlaces = [populateStore];
+    storeElements = storeContainer.getElementsByClassName("defaultItem");
+}
+
+
 function populateStore() {
 
     let min = 999999;
@@ -166,36 +205,3 @@ function reloadGames() {
         noItem.style.display = "block";
     }
 }
-
-const storeContainer = document.getElementById("storeContainer");
-
-const browserElement = document.getElementById("browser");
-
-const genreElementCont = document.getElementById("genres");
-const regionElementCont = document.getElementById("region");
-const modesElementCont = document.getElementById("modes");
-
-const minPrice = document.getElementById("minPrice");
-const maxPrice = document.getElementById("maxPrice");
-
-var storeItems = [];
-var storeElements = [];
-
-var genresButtons = [];
-var selectedGenres = [];
-
-var regionButtons = [];
-var selectedRegions = [];
-
-var modeButtons = [];
-var selectedModes = [];
-
-let temp = document.createElement("p");
-temp.innerHTML = "No se encontró ningún elemento :(";
-var noItem = storeContainer.appendChild(temp);
-
-var count = 0;
-
-var populationPlaces = [populateStore];
-
-storeElements = storeContainer.getElementsByClassName("defaultItem");
