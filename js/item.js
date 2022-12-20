@@ -25,6 +25,7 @@ class BaseItem {
     parent;
     nameRef;
     imageRef;
+    ref;
 
     constructor(parent, image, itemName) {
         this.image = image;
@@ -35,18 +36,18 @@ class BaseItem {
     }
 
     generate() {
-        let item = document.createElement("a");
-        item.className = "defaultItem";
-        this.parent.appendChild(item);
+        this.ref = document.createElement("a");
+        this.ref.className = "defaultItem";
+        this.parent.appendChild(this.ref);
 
         this.imageRef = document.createElement("img");
         this.imageRef.className = "itemImage";
         this.imageRef.src = "img/itemImages/" + this.image + ".png";
-        item.appendChild(this.imageRef);
+        this.ref.appendChild(this.imageRef);
 
         let itemInfo = document.createElement("div");
         itemInfo.className = "itemInfo";
-        item.appendChild(itemInfo);
+        this.ref.appendChild(itemInfo);
 
         this.nameRef = document.createElement("h1");
         this.nameRef.innerHTML = this.itemName;
@@ -56,6 +57,12 @@ class BaseItem {
     change() {
         this.nameRef.innerHTML = this.itemName;
         this.imageRef.src = "img/itemImages/" + this.image + ".png";
+    }
+    size(size) {
+        this.ref.style.maxWidth = size + "px";
+        this.ref.style.width = size + "px";
+        this.imageRef.style.maxWidth = size + "px";
+        this.imageRef.style.width = size + "px";
     }
 }
 

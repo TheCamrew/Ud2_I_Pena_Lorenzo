@@ -1,5 +1,4 @@
 const button = document.getElementById("button");
-
 var item;
 var time = 0;
 var seqDuration = 5;
@@ -8,6 +7,7 @@ var interval;
 var populationPlaces;
 
 var onSeq = false;
+const defaultSize = 256;
 
 load();
 
@@ -26,16 +26,21 @@ function sequence() {
         return;
     }
     onSeq = true;
+    button.style.display = "none";
     waitToTime = time + seqDuration * 10;
+    size = defaultSize;
     interval = setInterval(updateTime, 100);
 }
 
 function endSeq() {
     clearInterval(interval);
     time = 0;
-    console.log("end");
-    item.itemName = "obamna";
 
+    switchItem();
+    //TODO:fix
+    item.size(defaultSize);
+
+    button.style.display = "block";
     onSeq = false;
 }
 
@@ -45,10 +50,11 @@ function updateTime() {
         endSeq();
     }
     switchItem();
+    size += 2;
+    item.size(size);
 }
 
 function switchItem() {
-    //TODO:Do the thingies
     let i = Math.round(Math.random() * (Object.keys(games).length - 1));
     item.itemName = games[i].itemName;
     item.image = games[i].image;
