@@ -15,7 +15,9 @@ const genres = [
     "RPG",
     "MMORPG",
     "Incremental",
-    "Deducción"
+    "Deducción",
+    "Deportes",
+    "Carreras"
 ];
 const modes = ["Un Jugador", "Multijugador", "Cooperativo"];
 
