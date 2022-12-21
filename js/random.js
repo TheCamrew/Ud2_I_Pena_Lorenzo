@@ -8,6 +8,7 @@ var populationPlaces;
 
 var onSeq = false;
 const defaultSize = 256;
+const finalSize = 320;
 
 load();
 
@@ -27,9 +28,9 @@ function sequence() {
     }
     onSeq = true;
     button.style.display = "none";
-    waitToTime = time + seqDuration * 10;
+    waitToTime = time + seqDuration * steps;
     size = defaultSize;
-    interval = setInterval(updateTime, 100);
+    interval = setInterval(updateTime, 1000 / steps);
 }
 
 function endSeq() {
@@ -48,9 +49,10 @@ function updateTime() {
     time++;
     if (time >= waitToTime) {
         endSeq();
+        return;
     }
     switchItem();
-    size += 2;
+    size += (finalSize - defaultSize) / (steps * seqDuration);
     item.size(size);
 }
 
