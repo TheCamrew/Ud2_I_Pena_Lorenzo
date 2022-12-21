@@ -35,12 +35,16 @@ textarea {
 
 .sendButton {
     cursor: pointer;
+    transition: ease;
+    transition-duration: 100ms;
 }
 
 .sendButton:hover {
     transform: scale(1.03);
     background-color: var(--accentColor);
     color: white;
+    box-shadow: 2px 2px 1px black;
+    transform: scale(1.03);
 }
 
 .formSec {
