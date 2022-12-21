@@ -1,4 +1,5 @@
 const button = document.getElementById("button");
+const vignette = document.getElementById("overlay");
 const steps = 10;
 
 const defaultSize = 1;
@@ -13,6 +14,7 @@ var interval;
 var populationPlaces;
 
 var onSeq = false;
+vignette.style.filter = "opacity(0%)";
 
 load();
 
@@ -46,6 +48,7 @@ function endSeq() {
 
     button.style.display = "block";
     onSeq = false;
+    vignette.style.filter = "opacity(0%)";
 }
 
 function updateTime() {
@@ -56,8 +59,8 @@ function updateTime() {
     }
     switchItem();
     size += (finalSize - defaultSize) / (steps * seqDuration);
-    //item.size(size);
     item.ref.style.transform = `scale(  ${size}  ) translate(${((time / disp) / 2) - (Math.random() * (time / disp))}px, ${((time / disp) / 2) - (Math.random() * (time / disp))}px) rotate(${((time / disp) / 2) - (Math.random() * (time / disp))}deg) `;
+    vignette.style.filter = `opacity(${100 - (100 - time * 2)}%)`;
 }
 
 function switchItem() {
