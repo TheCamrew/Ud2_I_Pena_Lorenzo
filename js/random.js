@@ -3,7 +3,7 @@ const vignette = document.getElementById("overlay");
 const steps = 10;
 
 const defaultSize = 1;
-const finalSize = 1.2;
+const finalSize = 1.5;
 const disp = 5;
 
 var item;
