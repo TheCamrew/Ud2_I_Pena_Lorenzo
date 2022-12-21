@@ -49,6 +49,7 @@ function endSeq() {
     button.style.display = "block";
     onSeq = false;
     vignette.style.filter = "opacity(0%)";
+    vignette.style.backdropFilter = `blur(0px)`;
 }
 
 function updateTime() {
@@ -61,6 +62,8 @@ function updateTime() {
     size += (finalSize - defaultSize) / (steps * seqDuration);
     item.ref.style.transform = `scale(  ${size}  ) translate(${((time / disp) / 2) - (Math.random() * (time / disp))}px, ${((time / disp) / 2) - (Math.random() * (time / disp))}px) rotate(${((time / disp) / 2) - (Math.random() * (time / disp))}deg) `;
     vignette.style.filter = `opacity(${100 - (100 - time * 2)}%)`;
+    vignette.style.backdropFilter = `blur(${time / 10}px)`;
+
 }
 
 function switchItem() {
