@@ -5,7 +5,7 @@ const steps = 10;
 const defaultSize = 1;
 const finalSize = 1.4;
 const disp = 5;
-const endTime = 1.5;
+const endTime = 1.25;
 
 var item;
 var time = 0;
@@ -23,6 +23,7 @@ load();
 async function load() {
     populationPlaces = [function () {
         item = new BaseItem(document.getElementById("randomCont"), games[0].image, games[0].itemName);
+        switchItem();
     }];
 }
 
@@ -45,7 +46,7 @@ function sequence() {
 function endZoom() {
 
     switchItem();
-    item.ref.style.transform = `scale(  ${finalSize + 0.25}  ) translate(0px, 0px) rotate(0deg)`;
+    item.ref.style.transform = `scale(  ${finalSize + 0.5}  ) translate(0px, 0px) rotate(0deg)`;
 
     button.style.display = "block";
     onZoom = false;
