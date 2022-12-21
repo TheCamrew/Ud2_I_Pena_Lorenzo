@@ -1,15 +1,18 @@
 const button = document.getElementById("button");
 const steps = 10;
+
+const defaultSize = 1;
+const finalSize = 1.2;
+const disp = 5;
+
 var item;
 var time = 0;
-var seqDuration = 5;
+const seqDuration = 5;
 var waitToTime;
 var interval;
 var populationPlaces;
 
 var onSeq = false;
-const defaultSize = 256;
-const finalSize = 320;
 
 load();
 
@@ -39,8 +42,7 @@ function endSeq() {
     time = 0;
 
     switchItem();
-    //TODO:fix
-    item.size(defaultSize);
+    item.ref.style.transform = `scale(  ${defaultSize}  ) translate(0px, 0px) rotate(0deg)`;
 
     button.style.display = "block";
     onSeq = false;
@@ -54,7 +56,8 @@ function updateTime() {
     }
     switchItem();
     size += (finalSize - defaultSize) / (steps * seqDuration);
-    item.size(size);
+    //item.size(size);
+    item.ref.style.transform = `scale(  ${size}  ) translate(${((time / disp) / 2) - (Math.random() * (time / disp))}px, ${((time / disp) / 2) - (Math.random() * (time / disp))}px) rotate(${((time / disp) / 2) - (Math.random() * (time / disp))}deg) `;
 }
 
 function switchItem() {

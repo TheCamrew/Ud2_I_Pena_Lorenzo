@@ -18,3 +18,7 @@ section {
 .sendButton {
     width: 256px;
 }
+
+.defaultItem {
+    transition-duration: 100ms;
+}
