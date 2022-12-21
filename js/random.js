@@ -1,4 +1,5 @@
 const button = document.getElementById("button");
+const steps = 10;
 var item;
 var time = 0;
 var seqDuration = 5;
