@@ -24,6 +24,7 @@ async function load() {
     populationPlaces = [function () {
         item = new BaseItem(document.getElementById("randomCont"), games[0].image, games[0].itemName);
         item.ref.setAttribute("selected", false);
+        button.setAttribute("selected", false);
         switchItem();
     }];
 }
@@ -42,6 +43,7 @@ function sequence() {
     waitToTime = time + seqDuration * steps;
     size = defaultSize;
     item.ref.setAttribute("selected", true);
+    button.setAttribute("selected", true);
 
     interval = setInterval(updateTime, 1000 / steps);
 }
@@ -84,6 +86,7 @@ function endSeq() {
     vignette.style.backdropFilter = `blur(0px)`;
     item.ref.style.transform = `scale(  ${defaultSize}  ) translate(0px, 0px) rotate(0deg)`;
     item.ref.setAttribute("selected", false);
+    button.setAttribute("selected", false);
 
 }
 

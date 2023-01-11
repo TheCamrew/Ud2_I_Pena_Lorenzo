@@ -24,7 +24,7 @@ section {
 }
 
 .sendButton[selected="false"] {
-    animation-name: itemAnim;
+    animation-name: butAnim;
     animation-duration: 6s;
     animation-iteration-count: infinite;
     animation-timing-function: ease;
