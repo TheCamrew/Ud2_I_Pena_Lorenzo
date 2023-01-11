@@ -11,6 +11,8 @@
 * {
     margin: 0px;
     font-family: Okine;
+    transition: ease;
+    transition-duration: 100ms;
 }
 
 body {
@@ -76,6 +78,10 @@ header {
     justify-content: space-evenly;
 }
 
+.log a:hover {
+    transform: scale(1.1);
+}
+
 .shoppingCart {
     background-color: var(--accentColor);
     border: 0px;
@@ -116,7 +122,7 @@ header {
     background-position: center 0px;
     background-attachment: fixed;
     background-color: var(--accentColor);
-    
+
     transition: linear;
     transition-duration: 3600000ms;
 }

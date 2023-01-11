@@ -17,11 +17,81 @@ section {
 
 .sendButton {
     width: 256px;
+    animation-name: butAnim;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease;
+}
+
+.sendButton[selected="false"] {
+    animation-name: itemAnim;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease;
+}
+
+@keyframes butAnim {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    4% {
+        transform: rotate(1deg);
+    }
+
+    8% {
+        transform: rotate(-1deg);
+    }
+
+    12% {
+        transform: rotate(1deg);
+    }
+
+    16% {
+        transform: rotate(-1deg);
+    }
+
+    20% {
+        transform: rotate(0deg);
+    }
 }
 
 .defaultItem {
     transition-duration: 100ms;
     z-index: 11;
+}
+
+.defaultItem[selected="false"] {
+    animation-name: itemAnim;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease;
+}
+
+@keyframes itemAnim {
+    0% {
+        transform: scale(1);
+    }
+
+    4% {
+        transform: scale(1.02);
+    }
+
+    8% {
+        transform: scale(1);
+    }
+
+    12% {
+        transform: scale(1.02);
+    }
+
+    16% {
+        transform: scale(1);
+    }
+
+    20% {
+        transform: scale(1);
+    }
 }
 
 #overlay {

@@ -12,9 +12,9 @@ form {
 fieldset {
     border: 0;
     display: flex;
-    flex-wrap: wrap;
     justify-content: space-evenly;
     flex-direction: column;
+    align-items: center;
     padding: 0;
     width: 100%;
 }
@@ -50,6 +50,10 @@ textarea {
 .formSec {
     padding-top: 20px;
     width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 320px
 }
 
 section {
@@ -72,4 +76,8 @@ section {
 
 input:focus::placeholder {
     color: transparent;
+}
+
+input[type="radio"] {
+    max-width: 25px;
 }

@@ -14,8 +14,7 @@
     cursor: pointer;
     border: 2px black solid;
     box-shadow: 1px 1px 1px black;
-    transition: ease;
-    transition-duration: 400ms;
+    transition-duration: 250ms;
 }
 
 .defaultItem:hover {
