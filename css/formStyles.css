@@ -69,3 +69,7 @@ section {
     align-items: center;
     width: 33%;
 }
+
+input:focus::placeholder {
+    color: transparent;
+}
