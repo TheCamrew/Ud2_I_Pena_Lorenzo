@@ -31,14 +31,16 @@ var populationPlaces;
 
 load();
 
+//Asignamos funciones de populacion
 async function load() {
     populationPlaces = [populateStore];
     storeElements = storeContainer.getElementsByClassName("defaultItem");
 }
 
-
+//Generamos los distintos parametros para identificar cada juego y cargamos los juegos en la tienda
 function populateStore() {
 
+    //Comprobamos cual es el precio maximo y minimo del conjunto de juegos
     let min = 999999;
     let max = 0;
 
@@ -55,13 +57,19 @@ function populateStore() {
     minPrice.value = min;
     maxPrice.value = max;
 
+    //Generamos los botones de los distintos generos
     generateGenres();
+
+    //Generamos los botones de las distintas regiones
     generateRegions();
+
+    //Generamos los botones de los distintos modos de juego
     generateModes();
 
     reloadGames();
 }
 
+//Generamos los botones de los distintos generos
 function generateGenres() {
 
     for (let i = 0; i < genres.length; i++) {
@@ -84,6 +92,7 @@ function generateGenres() {
     }
 }
 
+//Generamos los botones de las distintas regiones
 function generateRegions() {
 
     let avReg = [];
@@ -126,6 +135,7 @@ function generateRegions() {
     }
 }
 
+//Generamos los botones de los distintos modos de juego
 function generateModes() {
 
     for (let i = 0; i < modes.length; i++) {
@@ -148,6 +158,7 @@ function generateModes() {
     }
 }
 
+//Modificamos la clase del boton segun esta pulsado o no
 function updateButton(i, buttons, selected) {
 
     if (buttons[i].id == "selected") {
@@ -157,6 +168,8 @@ function updateButton(i, buttons, selected) {
         buttons[i].id = "selected";
         selected[i] = i;
     }
+
+    //Actualizamos que juegos cumplen los criterios de busqueda
     reloadGames();
 }
 
@@ -164,6 +177,7 @@ function capitalizeFirstLetter(string) {
     return string.charAt(0).toUpperCase() + string.slice(1);
 }
 
+//Mostramos los juegos que cumplen los criterios de busqueda
 function reloadGames() {
 
     if (count == 0) {
@@ -176,6 +190,7 @@ function reloadGames() {
         storeElements[i].style.display = "none";
     }
 
+    //Iteramos sobre los distintos juegos y por cada criterio
     for (let i = 0; i < games.length; i++) {
         if (games[i].itemName.toUpperCase().search(browserElement.value.toUpperCase()) != -1 || browserElement.value == "") {
             if (parseFloat(games[i].price) >= minPrice.value && parseFloat(games[i].price) <= maxPrice.value) {

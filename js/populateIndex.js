@@ -1,3 +1,4 @@
+//Numero maximo de elementos por seccion
 const startGameAmount = 8;
 
 var recentLaunch = Array();
@@ -6,13 +7,16 @@ var populationPlaces;
 
 load();
 
+//Asignamos funciones de populacion
 async function load() {
-    populationPlaces = [populateRecentLaunch,
+    populationPlaces = [
+        populateRecentLaunch,
         populateMostSold,
         populateBestPrice
     ];
 }
 
+//Ordenamos los elementos segun la fecha de salida y generamos en el DOM
 function populateRecentLaunch() {
 
     games.sort((a, b) => (a.releaseDate < b.releaseDate) ? 1 : -1);
@@ -29,6 +33,7 @@ function populateRecentLaunch() {
     });
 }
 
+//Ordenamos los elementos segun el numero de ventas y generamos en el DOM
 function populateMostSold() {
     games.sort((a, b) => b.sales - a.sales);
 
@@ -44,6 +49,7 @@ function populateMostSold() {
     });
 }
 
+//Ordenamos los elementos segun el mayor descuento y generamos en el DOM
 function populateBestPrice() {
 
     games.sort((a, b) => (1 - (a.price / a.originalPrice) < 1 - (b.price / b.originalPrice)) ? 1 : -1);

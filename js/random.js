@@ -20,6 +20,7 @@ vignette.style.filter = "opacity(0%)";
 
 load();
 
+//Cargamos un juego aleatorio y lo generamos en el DOM
 async function load() {
     populationPlaces = [function () {
         item = new BaseItem(document.getElementById("randomCont"), games[0].image, games[0].itemName);
@@ -33,6 +34,7 @@ button.addEventListener("click", function () {
     sequence();
 });
 
+//Comenzamos la animacion
 function sequence() {
     if (onSeq) {
         return;
@@ -48,6 +50,7 @@ function sequence() {
     interval = setInterval(updateTime, 1000 / steps);
 }
 
+//Termina la animacion de zoom
 function endZoom() {
 
     switchItem();
@@ -57,6 +60,7 @@ function endZoom() {
     onZoom = false;
 }
 
+//Actualizamos la animacion
 function updateTime() {
     time++;
     if (time >= waitToTime && onZoom) {
@@ -78,6 +82,7 @@ function updateTime() {
 
 }
 
+//Termina la animacion
 function endSeq() {
     clearInterval(interval);
     time = 0;
@@ -90,6 +95,7 @@ function endSeq() {
 
 }
 
+//Cambia el juego que aparece
 function switchItem() {
     let i = Math.round(Math.random() * (Object.keys(games).length - 1));
     item.itemName = games[i].itemName;

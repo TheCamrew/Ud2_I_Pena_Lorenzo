@@ -21,6 +21,7 @@ const genres = [
 ];
 const modes = ["Un Jugador", "Multijugador", "Cooperativo"];
 
+//Clase item base (se usa para el juego aleatorio)
 class BaseItem {
     image;
     itemName;
@@ -37,6 +38,7 @@ class BaseItem {
         this.generate(this.parent);
     }
 
+    //Crea el elemento en el DOM
     generate() {
         this.ref = document.createElement("a");
         this.ref.className = "defaultItem";
@@ -56,10 +58,13 @@ class BaseItem {
         itemInfo.appendChild(this.nameRef);
     }
 
+    //Cambia la imagen del elemento y su nombre
     change() {
         this.nameRef.innerHTML = this.itemName;
         this.imageRef.src = "img/itemImages/" + this.image + ".png";
     }
+
+    //Cambia el tamaño del elemento
     size(size) {
         this.ref.style.maxWidth = size + "px";
         this.ref.style.width = size + "px";
@@ -68,6 +73,7 @@ class BaseItem {
     }
 }
 
+//Clase item del juego
 class Item {
     image;
     itemName;
@@ -86,6 +92,7 @@ class Item {
         this.generate(this.parent);
     }
 
+    //Crea el elemento en el DOM
     generate() {
         let item = document.createElement("a");
         item.className = "defaultItem";
@@ -132,6 +139,7 @@ class Item {
     }
 }
 
+//Leemos el JSON con los datos
 async function loadJson() {
     try {
         games = await fetch("../assets/games.json").then((response) => response.json());
@@ -141,6 +149,7 @@ async function loadJson() {
     return games;
 }
 
+//Populamos los distintos elementos con los datos
 async function loadGames() {
 
     games = await loadJson();
@@ -150,8 +159,10 @@ async function loadGames() {
     });
 }
 
+//Datos del JSON
 var games;
 
+//Funcion que indica como popular las distintas secciones
 var populationPlaces = [];
 
 loadGames();
