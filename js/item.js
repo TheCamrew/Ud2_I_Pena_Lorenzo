@@ -165,7 +165,7 @@ var games;
 //Funcion que indica como popular las distintas secciones
 var populationPlaces = [];
 
-loadGames();
+await loadGames();
 
 var secretCount = 0;
 
