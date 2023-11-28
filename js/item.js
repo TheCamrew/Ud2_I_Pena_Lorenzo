@@ -174,7 +174,7 @@ var secretCount = 0;
 function increaseSecret() {
     secretCount++;
     if (secretCount >= 10) {
-        window.open("../secret.html");
+        window.open("./secret.html");
         secretCount = 0;
     }
 }
