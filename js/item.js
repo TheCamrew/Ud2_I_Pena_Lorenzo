@@ -142,7 +142,7 @@ class Item {
 //Leemos el JSON con los datos
 async function loadJson() {
     try {
-        games = await fetch("../assets/games.json").then((response) => response.json());
+        games = await fetch("./assets/games.json").then((response) => response.json());
     } catch (error) {
         console.log(error);
     }
