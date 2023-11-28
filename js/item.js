@@ -154,6 +154,8 @@ async function loadGames() {
 
     games = await loadJson();
 
+    console.log(games);
+
     populationPlaces.forEach(element => {
         element();
     });
@@ -165,7 +167,7 @@ var games;
 //Funcion que indica como popular las distintas secciones
 var populationPlaces = [];
 
-await loadGames();
+loadGames();
 
 var secretCount = 0;
 
